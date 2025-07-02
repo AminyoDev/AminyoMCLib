@@ -1,11 +1,8 @@
-package dev.aminyo.aminyomclib.bukkit.core.models;
-
-import java.lang.module.Configuration;
+package dev.aminyo.aminyomclib.core.models;
 
 public interface FileModel {
-    void reloadConfig();
-    Configuration getConfig();
-    void saveConfig();
     void createFile();
+    void reloadConfig();
+    void saveConfig();
     void autoUpdateConfig();
 }

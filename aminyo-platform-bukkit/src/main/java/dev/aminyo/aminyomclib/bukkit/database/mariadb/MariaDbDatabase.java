@@ -1,10 +1,14 @@
-package dev.aminyo.aminyomclib.database.mariadb;
+package dev.aminyo.aminyomclib.bukkit.database.mariadb;
 
-import dev.aminyo.aminyomclib.database.Database;
-import dev.aminyo.aminyomclib.tasks.AsyncTaskScheduler;
-import dev.aminyo.aminyomclib.enums.DatabaseType;
-import dev.aminyo.aminyomclib.utils.database.Query;
-import dev.aminyo.aminyomclib.utils.database.QueryUtils;
+import dev.aminyo.aminyomclib.core.database.Database;
+import dev.aminyo.aminyomclib.core.database.mariadb.MariaDbConfig;
+import dev.aminyo.aminyomclib.core.database.mariadb.MariaDbConnection;
+import dev.aminyo.aminyomclib.core.enums.DatabaseType;
+import dev.aminyo.aminyomclib.core.tasks.AsyncTaskScheduler;
+import dev.aminyo.aminyomclib.core.tasks.AsyncTaskSchedulerFactory;
+import dev.aminyo.aminyomclib.core.utils.database.Query;
+import dev.aminyo.aminyomclib.core.utils.database.QueryUtils;
+
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 
@@ -14,13 +18,14 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 
-public class MariaDbDatabase extends AsyncTaskScheduler implements Database {
+public class MariaDbDatabase implements Database {
     private final Plugin plugin;
     private MariaDbConnection mariaDbConnection;
+    private final AsyncTaskScheduler taskScheduler;
 
     public MariaDbDatabase(Plugin plugin) {
-        super(plugin);
         this.plugin = plugin;
+        this.taskScheduler = AsyncTaskSchedulerFactory.create(plugin);
     }
 
     @Override
@@ -131,7 +136,7 @@ public class MariaDbDatabase extends AsyncTaskScheduler implements Database {
             return;
         }
 
-        super.scheduleRunnable(new Runnable() {
+        taskScheduler.scheduleRunnable(new Runnable() {
             @Override
             public void run() {
                 try {

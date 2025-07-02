@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package dev.aminyo.aminyomclib.builders.scoreboard.adventure;
+package dev.aminyo.aminyomclib.bukkit.builders.scoreboard.adventure;
 
 import dev.aminyo.aminyomclib.builders.scoreboard.FastBoardBase;
 import dev.aminyo.aminyomclib.builders.scoreboard.FastReflection;

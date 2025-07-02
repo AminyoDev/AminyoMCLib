@@ -1,6 +1,6 @@
-package dev.aminyo.aminyomclib.utils.database;
+package dev.aminyo.aminyomclib.core.utils.database;
 
-import dev.aminyo.aminyomclib.enums.DatabaseType;
+import dev.aminyo.aminyomclib.core.enums.DatabaseType;
 import org.apache.commons.lang3.tuple.Pair;
 
 import java.util.ArrayList;

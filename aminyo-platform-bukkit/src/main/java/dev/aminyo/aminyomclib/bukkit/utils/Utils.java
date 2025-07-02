@@ -1,4 +1,4 @@
-package dev.aminyo.aminyomclib.core.utils;
+package dev.aminyo.aminyomclib.bukkit.utils;
 
 import dev.aminyo.aminyomclib.core.utils.colors.IridiumColorAPI;
 import org.bukkit.Bukkit;

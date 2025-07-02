@@ -1,4 +1,4 @@
-package dev.aminyo.aminyomclib.database.mariadb;
+package dev.aminyo.aminyomclib.core.database.mariadb;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

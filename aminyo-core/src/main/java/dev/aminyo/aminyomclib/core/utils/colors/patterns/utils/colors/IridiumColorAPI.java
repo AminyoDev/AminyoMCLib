@@ -1,10 +1,10 @@
-package dev.aminyo.aminyomclib.core.utils.colors;
+package dev.aminyo.aminyomclib.core.utils.colors.patterns.utils.colors;
 
 import com.google.common.collect.ImmutableMap;
-import dev.aminyo.aminyomclib.core.utils.colors.patterns.GradientPattern;
-import dev.aminyo.aminyomclib.core.utils.colors.patterns.Pattern;
-import dev.aminyo.aminyomclib.core.utils.colors.patterns.RainbowPattern;
-import dev.aminyo.aminyomclib.core.utils.colors.patterns.SolidPattern;
+import dev.aminyo.aminyomclib.core.utils.colors.patterns.utils.colors.patterns.GradientPattern;
+import dev.aminyo.aminyomclib.core.utils.colors.patterns.utils.colors.patterns.Pattern;
+import dev.aminyo.aminyomclib.core.utils.colors.patterns.utils.colors.patterns.RainbowPattern;
+import dev.aminyo.aminyomclib.core.utils.colors.patterns.utils.colors.patterns.SolidPattern;
 import net.md_5.bungee.api.ChatColor;
 import org.apache.commons.lang3.Validate;
 import org.bukkit.Bukkit;

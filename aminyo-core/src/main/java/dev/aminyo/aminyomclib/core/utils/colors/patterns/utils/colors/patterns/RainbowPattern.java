@@ -1,7 +1,7 @@
-package dev.aminyo.aminyomclib.core.utils.colors.patterns;
+package dev.aminyo.aminyomclib.core.utils.colors.patterns.utils.colors.patterns;
 
 
-import dev.aminyo.aminyomclib.core.utils.colors.IridiumColorAPI;
+import dev.aminyo.aminyomclib.core.utils.colors.patterns.utils.colors.IridiumColorAPI;
 
 import java.util.regex.Matcher;
 

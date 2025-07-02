@@ -1,4 +1,4 @@
-package dev.aminyo.aminyomclib.builders.items;
+package dev.aminyo.aminyomclib.bukkit.builders.items;
 
 import com.cryptomorin.xseries.XMaterial;
 import org.bukkit.inventory.ItemStack;

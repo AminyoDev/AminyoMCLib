@@ -1,10 +1,12 @@
-package dev.aminyo.aminyomclib.bungee.database.sqlite;
+package dev.aminyo.aminyomclib.bukkit.database.sqlite;
 
-import dev.aminyo.aminyomclib.database.Database;
-import dev.aminyo.aminyomclib.tasks.AsyncTaskScheduler;
-import dev.aminyo.aminyomclib.enums.DatabaseType;
-import dev.aminyo.aminyomclib.utils.database.Query;
-import dev.aminyo.aminyomclib.utils.database.QueryUtils;
+import dev.aminyo.aminyomclib.core.database.Database;
+import dev.aminyo.aminyomclib.core.database.sqlite.SqLiteConfig;
+import dev.aminyo.aminyomclib.core.enums.DatabaseType;
+import dev.aminyo.aminyomclib.core.tasks.AsyncTaskScheduler;
+import dev.aminyo.aminyomclib.core.tasks.AsyncTaskSchedulerFactory;
+import dev.aminyo.aminyomclib.core.utils.database.Query;
+import dev.aminyo.aminyomclib.core.utils.database.QueryUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 
@@ -14,13 +16,14 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 
-public class SqLiteDatabase extends AsyncTaskScheduler implements Database {
+public abstract class SqLiteDatabase implements Database {
     private final Plugin plugin;
     private SqLiteConnection sqLiteConnection;
+    private final AsyncTaskScheduler taskScheduler;
 
     public SqLiteDatabase(Plugin plugin) {
-        super(plugin);
         this.plugin = plugin;
+        this.taskScheduler = AsyncTaskSchedulerFactory.create(plugin);
     }
 
     @Override
@@ -131,7 +134,7 @@ public class SqLiteDatabase extends AsyncTaskScheduler implements Database {
             return;
         }
 
-        super.scheduleRunnable(new Runnable() {
+        taskScheduler.scheduleRunnable(new Runnable() {
             @Override
             public void run() {
                 try {

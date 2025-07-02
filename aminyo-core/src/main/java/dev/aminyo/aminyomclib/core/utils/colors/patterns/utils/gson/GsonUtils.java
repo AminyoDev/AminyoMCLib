@@ -1,8 +1,10 @@
-package dev.aminyo.aminyomclib.core.utils.gson;
+package dev.aminyo.aminyomclib.core.utils.colors.patterns.utils.gson;
 
 import com.google.gson.*;
 
-import java.io.*;
+import java.io.IOException;
+import java.io.Reader;
+import java.io.Writer;
 import java.lang.reflect.Type;
 import java.nio.file.Files;
 import java.nio.file.Paths;

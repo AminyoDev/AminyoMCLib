@@ -1,4 +1,4 @@
-package dev.aminyo.aminyomclib.core.utils.uuid;
+package dev.aminyo.aminyomclib.core.utils.colors.patterns.utils.uuid;
 
 import com.google.gson.TypeAdapter;
 import com.google.gson.stream.JsonReader;

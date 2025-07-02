@@ -1,8 +1,7 @@
-package dev.aminyo.aminyomclib.utils.player;
+package dev.aminyo.aminyomclib.bukkit.utils.player;
 
 import com.cryptomorin.xseries.XSound;
-import dev.aminyo.aminyomclib.utils.Utils;
-import dev.aminyo.aminyomclib.utils.version.VersionUtils;
+import dev.aminyo.aminyomclib.bukkit.utils.version.VersionUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.Location;

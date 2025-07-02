@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package dev.aminyo.aminyomclib.builders.scoreboard;
+package dev.aminyo.aminyomclib.bukkit.builders.scoreboard;
 
 import org.bukkit.Bukkit;
 

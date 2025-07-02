@@ -1,4 +1,4 @@
-package dev.aminyo.aminyomclib.utils.metrics.bukkit;
+package dev.aminyo.aminyomclib.bukkit.utils.metrics.bukkit;
 
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;

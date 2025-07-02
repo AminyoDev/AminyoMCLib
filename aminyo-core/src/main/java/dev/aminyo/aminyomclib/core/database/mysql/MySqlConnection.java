@@ -1,4 +1,4 @@
-package dev.aminyo.aminyomclib.database.mysql;
+package dev.aminyo.aminyomclib.core.database.mysql;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

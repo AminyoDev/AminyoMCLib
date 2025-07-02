@@ -1,4 +1,4 @@
-package dev.aminyo.aminyomclib.core.utils.colors.patterns;
+package dev.aminyo.aminyomclib.core.utils.colors.patterns.utils.colors.patterns;
 
 /**
  * Represents a color pattern which can be applied to a String.

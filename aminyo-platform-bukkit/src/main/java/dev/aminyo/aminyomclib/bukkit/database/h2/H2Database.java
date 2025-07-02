@@ -1,10 +1,12 @@
-package dev.aminyo.aminyomclib.database.h2;
+package dev.aminyo.aminyomclib.bukkit.database.h2;
 
-import dev.aminyo.aminyomclib.database.Database;
-import dev.aminyo.aminyomclib.tasks.AsyncTaskScheduler;
-import dev.aminyo.aminyomclib.enums.DatabaseType;
-import dev.aminyo.aminyomclib.utils.database.Query;
-import dev.aminyo.aminyomclib.utils.database.QueryUtils;
+import dev.aminyo.aminyomclib.core.database.Database;
+import dev.aminyo.aminyomclib.core.database.h2.H2Config;
+import dev.aminyo.aminyomclib.core.enums.DatabaseType;
+import dev.aminyo.aminyomclib.core.tasks.AsyncTaskScheduler;
+import dev.aminyo.aminyomclib.core.tasks.AsyncTaskSchedulerFactory;
+import dev.aminyo.aminyomclib.core.utils.database.Query;
+import dev.aminyo.aminyomclib.core.utils.database.QueryUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 
@@ -14,12 +16,13 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 
-public class H2Database extends AsyncTaskScheduler implements Database {
+public class H2Database  implements Database {
     private final Plugin plugin;
     private H2Connection h2Connection;
+    private final AsyncTaskScheduler taskScheduler;
 
     public H2Database(Plugin plugin) {
-        super(plugin);
+        this.taskScheduler = AsyncTaskSchedulerFactory.create(plugin);
         this.plugin = plugin;
     }
 
@@ -131,7 +134,7 @@ public class H2Database extends AsyncTaskScheduler implements Database {
             return;
         }
 
-        super.scheduleRunnable(new Runnable() {
+        taskScheduler.scheduleRunnable(new Runnable() {
             @Override
             public void run() {
                 try {

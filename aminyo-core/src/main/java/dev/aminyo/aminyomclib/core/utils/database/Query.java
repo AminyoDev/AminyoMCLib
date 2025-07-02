@@ -1,4 +1,4 @@
-package dev.aminyo.aminyomclib.utils.database;
+package dev.aminyo.aminyomclib.core.utils.database;
 
 public class Query {
     private String query;

@@ -1,10 +1,13 @@
-package dev.aminyo.aminyomclib.database.mysql;
+package dev.aminyo.aminyomclib.bukkit.database.mysql;
 
-import dev.aminyo.aminyomclib.database.Database;
-import dev.aminyo.aminyomclib.tasks.AsyncTaskScheduler;
-import dev.aminyo.aminyomclib.enums.DatabaseType;
-import dev.aminyo.aminyomclib.utils.database.Query;
-import dev.aminyo.aminyomclib.utils.database.QueryUtils;
+import dev.aminyo.aminyomclib.core.database.Database;
+import dev.aminyo.aminyomclib.core.database.mysql.MySqlConfig;
+import dev.aminyo.aminyomclib.core.database.mysql.MySqlConnection;
+import dev.aminyo.aminyomclib.core.enums.DatabaseType;
+import dev.aminyo.aminyomclib.core.tasks.AsyncTaskScheduler;
+import dev.aminyo.aminyomclib.core.tasks.AsyncTaskSchedulerFactory;
+import dev.aminyo.aminyomclib.core.utils.database.Query;
+import dev.aminyo.aminyomclib.core.utils.database.QueryUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 
@@ -14,13 +17,14 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 
-public class MySqlDatabase extends AsyncTaskScheduler implements Database {
+public class MySqlDatabase implements Database {
 
     private final Plugin plugin;
     private MySqlConnection mySqlConnection;
+    private final AsyncTaskScheduler taskScheduler;
 
     public MySqlDatabase(Plugin plugin) {
-        super(plugin);
+        this.taskScheduler = AsyncTaskSchedulerFactory.create(plugin);
         this.plugin = plugin;
     }
 
@@ -132,7 +136,7 @@ public class MySqlDatabase extends AsyncTaskScheduler implements Database {
             return;
         }
 
-        super.scheduleRunnable(new Runnable() {
+        taskScheduler.scheduleRunnable(new Runnable() {
             @Override
             public void run() {
                 try {

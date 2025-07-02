@@ -1,16 +1,17 @@
 package dev.aminyo.aminyomclib.bukkit.models;
 
+import dev.aminyo.aminyomclib.core.models.FileModel;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
-import dev.aminyo.aminyomclib.core.models.FileModel;
 
 import java.io.File;
 import java.io.IOException;
 
-public abstract class FileModel {
+public abstract class BukkitFileModel implements FileModel {
     protected File file;
     protected FileConfiguration config;
 
+    @Override
     public void reloadConfig() {
         config = YamlConfiguration.loadConfiguration(file);
     }
@@ -22,6 +23,7 @@ public abstract class FileModel {
         return config;
     }
 
+    @Override
     public void saveConfig() {
         if (config == null || file == null) {
             return;
@@ -33,6 +35,8 @@ public abstract class FileModel {
         }
     }
 
+    @Override
     public abstract void createFile();
+    @Override
     public abstract void autoUpdateConfig();
 }
