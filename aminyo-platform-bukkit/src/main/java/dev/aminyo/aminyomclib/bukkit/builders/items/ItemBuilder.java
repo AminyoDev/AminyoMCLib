@@ -4,7 +4,6 @@ import com.cryptomorin.xseries.XMaterial;
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;
 import dev.aminyo.aminyomclib.bukkit.utils.Utils;
-import dev.aminyo.aminyomclib.utils.Utils;
 import org.bukkit.Color;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
