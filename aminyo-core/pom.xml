@@ -11,10 +11,6 @@
 
     <artifactId>aminyo-core</artifactId>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-
     <repositories>
         <!-- https://hub.spigotmc.org/nexus/content/repositories/snapshots/ -->
         <repository>
