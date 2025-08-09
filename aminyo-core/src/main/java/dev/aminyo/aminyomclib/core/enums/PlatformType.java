@@ -1,4 +1,4 @@
-package it.aminyo.aminyomclib.core.enums;
+package dev.aminyo.aminyomclib.core.enums;
 
 public enum PlatformType {
     SPIGOT,

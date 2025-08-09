@@ -1,4 +1,4 @@
-package it.aminyo.aminyomclib.file;
+package it.aminyo.aminyomclib.file.enums;
 
 public enum FileFormat {
     YAML("yml", "yaml"),

@@ -1,4 +1,4 @@
-package it.aminyo.aminyomclib.core.exceptions;
+package dev.aminyo.aminyomclib.core.exceptions;
 
 public class AminyoRuntimeException extends Exception {
     public AminyoRuntimeException(String message) {

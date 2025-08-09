@@ -1,5 +1,6 @@
-package dev.aminyo.aminyomclib.spigot;
+package dev.aminyo.aminyomclib.spigot.listeners;
 
+import dev.aminyo.aminyomclib.spigot.utils.SpigotPlayerUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;

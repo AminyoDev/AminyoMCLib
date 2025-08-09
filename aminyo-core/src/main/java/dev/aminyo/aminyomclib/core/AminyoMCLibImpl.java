@@ -1,7 +1,7 @@
-package it.aminyo.aminyomclib.core;
+package dev.aminyo.aminyomclib.core;
 
-import it.aminyo.aminyomclib.core.interfaces.AminyoMCLib;
-import it.aminyo.aminyomclib.core.interfaces.PlatformAdapter;
+import dev.aminyo.aminyomclib.core.interfaces.AminyoMCLib;
+import dev.aminyo.aminyomclib.core.interfaces.PlatformAdapter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

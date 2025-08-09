@@ -1,6 +1,6 @@
-package it.aminyo.aminyomclib.core.interfaces;
+package dev.aminyo.aminyomclib.core.interfaces;
 
-import it.aminyo.aminyomclib.core.exceptions.AminyoException;
+import dev.aminyo.aminyomclib.core.exceptions.AminyoException;
 
 public interface Configurable {
     /**

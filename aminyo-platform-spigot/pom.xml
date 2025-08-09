@@ -10,6 +10,10 @@
     </parent>
 
     <artifactId>aminyo-platform-spigot</artifactId>
+    <packaging>jar</packaging>
+
+    <name>AminyoMCLib Spigot Platform</name>
+    <description>Spigot/Bukkit/Paper platform adapter for AminyoMCLib</description>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
@@ -17,4 +21,83 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencies>
+        <!-- Internal Modules -->
+        <dependency>
+            <groupId>dev.aminyo</groupId>
+            <artifactId>aminyo-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>dev.aminyo</groupId>
+            <artifactId>aminyo-file</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>dev.aminyo</groupId>
+            <artifactId>aminyo-database</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>dev.aminyo</groupId>
+            <artifactId>aminyo-utils</artifactId>
+        </dependency>
+
+        <!-- Spigot API -->
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+        </dependency>
+
+        <!-- Logging -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+
+        <!-- Testing -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
+                            <relocations>
+                                <relocation>
+                                    <pattern>com.zaxxer.hikari</pattern>
+                                    <shadedPattern>dev.aminyo.aminyomclib.libs.hikari</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>org.yaml.snakeyaml</pattern>
+                                    <shadedPattern>dev.aminyo.aminyomclib.libs.snakeyaml</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>com.google.gson</pattern>
+                                    <shadedPattern>dev.aminyo.aminyomclib.libs.gson</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>com.moandjiezana.toml</pattern>
+                                    <shadedPattern>dev.aminyo.aminyomclib.libs.toml</shadedPattern>
+                                </relocation>
+                            </relocations>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

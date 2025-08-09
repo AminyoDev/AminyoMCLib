@@ -1,6 +1,6 @@
-package it.aminyo.aminyomclib.core.interfaces;
+package dev.aminyo.aminyomclib.core.interfaces;
 
-import it.aminyo.aminyomclib.core.exceptions.AminyoRuntimeException;
+import dev.aminyo.aminyomclib.core.exceptions.AminyoRuntimeException;
 
 public interface Toggleable {
     /**

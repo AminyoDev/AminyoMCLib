@@ -1,4 +1,4 @@
-package dev.aminyo.aminyomclib.spigot;
+package dev.aminyo.aminyomclib.spigot.adapter;
 
 import dev.aminyo.aminyomclib.core.enums.PlatformType;
 import dev.aminyo.aminyomclib.core.interfaces.PlatformAdapter;

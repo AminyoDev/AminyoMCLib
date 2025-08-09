@@ -1,4 +1,4 @@
-package dev.aminyo.aminyomclib.database;
+package dev.aminyo.aminyomclib.database.enums;
 
 /**
  * Supported database types

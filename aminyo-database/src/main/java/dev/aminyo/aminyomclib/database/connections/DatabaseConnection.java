@@ -1,4 +1,6 @@
-package dev.aminyo.aminyomclib.database;
+package dev.aminyo.aminyomclib.database.connections;
+
+import dev.aminyo.aminyomclib.database.DatabaseConfig;
 
 /**
 * Abstract database connection interface

@@ -1,22 +1,14 @@
-package it.aminyo.aminyomclib.file;
+package it.aminyo.aminyomclib.file.extensions;
 
 import dev.aminyo.aminyomclib.core.exceptions.AminyoRuntimeException;
+import it.aminyo.aminyomclib.file.FileModel;
 import it.aminyo.aminyomclib.file.enums.FileFormat;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonParser;
-import com.moandjiezana.toml.Toml;
-import com.moandjiezana.toml.TomlWriter;
 import org.yaml.snakeyaml.Yaml;
 
 import java.io.*;
 import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * YAML file model implementation

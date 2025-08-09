@@ -1,4 +1,4 @@
-package dev.aminyo.aminyomclib.spigot;
+package dev.aminyo.aminyomclib.spigot.utils;
 
 import dev.aminyo.aminyomclib.utils.LocationUtils;
 import org.bukkit.Bukkit;

@@ -1,7 +1,7 @@
-package it.aminyo.aminyomclib.core.utils;
+package dev.aminyo.aminyomclib.core.utils;
 
-import it.aminyo.aminyomclib.core.AminyoMCLibImpl;
-import it.aminyo.aminyomclib.core.interfaces.AminyoMCLib;
+import dev.aminyo.aminyomclib.core.AminyoMCLibImpl;
+import dev.aminyo.aminyomclib.core.interfaces.AminyoMCLib;
 
 public final class VersionUtils {
 

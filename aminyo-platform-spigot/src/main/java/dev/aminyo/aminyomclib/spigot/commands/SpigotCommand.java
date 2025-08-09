@@ -1,4 +1,4 @@
-package dev.aminyo.aminyomclib.spigot;
+package dev.aminyo.aminyomclib.spigot.commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;

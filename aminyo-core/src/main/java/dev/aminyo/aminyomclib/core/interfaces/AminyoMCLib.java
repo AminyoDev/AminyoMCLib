@@ -1,4 +1,4 @@
-package it.aminyo.aminyomclib.core.interfaces;
+package dev.aminyo.aminyomclib.core.interfaces;
 
 import org.slf4j.Logger;
 

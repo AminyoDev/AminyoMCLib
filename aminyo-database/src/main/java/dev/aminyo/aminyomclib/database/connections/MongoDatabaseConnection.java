@@ -1,4 +1,4 @@
-package dev.aminyo.aminyomclib.database;
+package dev.aminyo.aminyomclib.database.connections;
 
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
@@ -6,6 +6,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
 import dev.aminyo.aminyomclib.core.exceptions.AminyoException;
+import dev.aminyo.aminyomclib.database.DatabaseConfig;
 import org.bson.Document;
 
 /**

@@ -1,7 +1,8 @@
-package dev.aminyo.aminyomclib.database;
+package dev.aminyo.aminyomclib.database.connections;
 
 import dev.aminyo.aminyomclib.core.exceptions.AminyoException;
 import dev.aminyo.aminyomclib.core.exceptions.AminyoRuntimeException;
+import dev.aminyo.aminyomclib.database.DatabaseConfig;
 import it.aminyo.aminyomclib.file.extensions.JsonFileModel;
 
 /**

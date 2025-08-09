@@ -1,4 +1,4 @@
-package dev.aminyo.aminyomclib.spigot;
+package dev.aminyo.aminyomclib.spigot.tasks;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;

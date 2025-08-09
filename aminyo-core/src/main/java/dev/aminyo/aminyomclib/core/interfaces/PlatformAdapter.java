@@ -1,7 +1,7 @@
-package it.aminyo.aminyomclib.core.interfaces;
+package dev.aminyo.aminyomclib.core.interfaces;
 
 
-import it.aminyo.aminyomclib.core.enums.PlatformType;
+import dev.aminyo.aminyomclib.core.enums.PlatformType;
 
 import java.util.concurrent.CompletableFuture;
 

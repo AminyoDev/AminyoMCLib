@@ -1,6 +1,7 @@
-package it.aminyo.aminyomclib.file;
+package it.aminyo.aminyomclib.file.properties;
 
 import dev.aminyo.aminyomclib.core.exceptions.AminyoRuntimeException;
+import it.aminyo.aminyomclib.file.FileModel;
 import it.aminyo.aminyomclib.file.enums.FileFormat;
 import java.io.*;
 import java.nio.file.Files;

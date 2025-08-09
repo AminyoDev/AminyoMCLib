@@ -1,9 +1,9 @@
-package it.aminyo.aminyomclib.core;
+package dev.aminyo.aminyomclib.core;
 
-import it.aminyo.aminyomclib.core.exceptions.AminyoException;
-import it.aminyo.aminyomclib.core.exceptions.AminyoRuntimeException;
-import it.aminyo.aminyomclib.core.interfaces.Configurable;
-import it.aminyo.aminyomclib.core.interfaces.Toggleable;
+import dev.aminyo.aminyomclib.core.exceptions.AminyoException;
+import dev.aminyo.aminyomclib.core.exceptions.AminyoRuntimeException;
+import dev.aminyo.aminyomclib.core.interfaces.Configurable;
+import dev.aminyo.aminyomclib.core.interfaces.Toggleable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

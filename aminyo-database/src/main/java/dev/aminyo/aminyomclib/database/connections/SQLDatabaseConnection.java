@@ -1,20 +1,12 @@
-package dev.aminyo.aminyomclib.database;
+package dev.aminyo.aminyomclib.database.connections;
 
-import com.mongodb.client.MongoClient;
-import com.mongodb.client.MongoClients;
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import dev.aminyo.aminyomclib.core.exceptions.AminyoException;
-import org.bson.Document;
+import dev.aminyo.aminyomclib.database.DatabaseConfig;
 
 import java.sql.*;
 import java.util.*;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 /**
  * SQL database connection implementation using HikariCP
