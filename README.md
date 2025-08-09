@@ -573,11 +573,11 @@ YamlManager config = new YamlManager(this, "config.yml")
 
 | Minecraft Version | AminyoMCLib | Java | Status |
 |------------------|-------------|------|--------|
-| 1.21.x | ✅ v1.0.0+ | 8+ | ✅ Fully Supported |
-| 1.20.x | ✅ v1.0.0+ | 8+ | ✅ Fully Supported |
-| 1.19.x | ✅ v1.0.0+ | 8+ | ✅ Fully Supported |
-| 1.18.x | ✅ v1.0.0+ | 8+ | ✅ Fully Supported |
-| 1.17.x | ✅ v1.0.0+ | 8+ | ✅ Fully Supported |
+| 1.21.x | ✅ v1.0.0+ | 21+ | ✅ Fully Supported |
+| 1.20.x | ✅ v1.0.0+ | 20+ | ✅ Fully Supported |
+| 1.19.x | ✅ v1.0.0+ | 17+ | ✅ Fully Supported |
+| 1.18.x | ✅ v1.0.0+ | 17+ | ✅ Fully Supported |
+| 1.17.x | ✅ v1.0.0+ | 17+ | ✅ Fully Supported |
 | 1.16.x | ✅ v1.0.0+ | 8+ | ✅ Fully Supported |
 | 1.15.x | ⚠️ v1.0.0+ | 8+ | ⚠️ Limited Testing |
 | 1.14.x | ⚠️ v1.0.0+ | 8+ | ⚠️ Limited Testing |
@@ -666,7 +666,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **SnakeYAML** for robust YAML parsing  
 - **MongoDB** team for the Java driver
 - **Spigot/Paper** community for extensive testing
-- **All contributors** who help improve this library
 
 ---
 
