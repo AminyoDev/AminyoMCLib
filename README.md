@@ -617,8 +617,8 @@ mvn test jacoco:report
 
 ### 💬 **Get Help**
 
-[![Discord](https://img.shields.io/discord/YOUR_DISCORD_ID?color=7289da&label=Discord&logo=discord)](https://discord.gg/your-invite)
-[![GitHub Issues](https://img.shields.io/github/issues/aminyo/aminyo-mclib.svg)](https://github.com/aminyo/aminyo-mclib/issues)
+[![Discord](https://img.shields.io/discord/YOUR_DISCORD_ID?color=7289da&label=Discord&logo=discord)](https://discord.gg/6bSpG9VNnx)
+[![GitHub Issues](https://img.shields.io/github/issues/aminyo/aminyo-mclib.svg)](https://github.com/AminyoDev/AminyoMCLib/issues)
 [![Wiki](https://img.shields.io/badge/Wiki-Documentation-blue)](https://github.com/aminyo/aminyo-mclib/wiki)
 
 </div>
