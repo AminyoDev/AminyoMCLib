@@ -4,7 +4,7 @@
   
 ![Version](https://img.shields.io/badge/version-1.0.0--SNAPSHOT-blue.svg)
 ![Java](https://img.shields.io/badge/Java-8%2B-orange.svg)
-[![JitPack](https://img.shields.io/jitpack/v/github/aminyo/aminyo-mclib.svg)](https://jitpack.io/#aminyo/aminyo-mclib)
+[![JitPack](https://img.shields.io/jitpack/v/github/aminyo/aminyo-mclib.svg)]([https://jitpack.io/#aminyo/aminyo-mclib](https://jitpack.io/#AminyoDev/AminyoMCLib/1.0.0))
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Build](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
 
