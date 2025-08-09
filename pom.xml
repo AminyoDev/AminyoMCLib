@@ -20,6 +20,7 @@
         <module>aminyo-platform-spigot</module>
         <module>aminyo-platform-bungee</module>
         <module>aminyo-platform-velocity</module>
+        <module>aminyo-all</module>
     </modules>
 
     <properties>
