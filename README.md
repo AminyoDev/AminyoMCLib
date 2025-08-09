@@ -1,1580 +1,679 @@
 # 🚀 AminyoMCLib
 
-[![Java](https://img.shields.io/badge/Java-21+-orange.svg)](https://openjdk.java.net/)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-1.0.0-green.svg)](https://github.com/aminyo/AminyoMCLib)
-[![Spigot](https://img.shields.io/badge/Spigot-1.7.10--1.21.8-yellow.svg)](https://www.spigotmc.org/)
-[![Paper](https://img.shields.io/badge/Paper-1.8+-red.svg)](https://papermc.io/)
-[![BungeeCord](https://img.shields.io/badge/BungeeCord-Latest-purple.svg)](https://www.spigotmc.org/wiki/bungeecord/)
-[![Velocity](https://img.shields.io/badge/Velocity-3.0+-cyan.svg)](https://velocitypowered.com/)
+<div align="center">
+  
+![Version](https://img.shields.io/badge/version-1.0.0--SNAPSHOT-blue.svg)
+![Java](https://img.shields.io/badge/Java-8%2B-orange.svg)
+[![JitPack](https://img.shields.io/jitpack/v/github/aminyo/aminyo-mclib.svg)](https://jitpack.io/#aminyo/aminyo-mclib)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Build](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
 
-# 🚀 AminyoMCLib
+**A comprehensive, modular library for Minecraft plugin development**
 
-[![Java](https://img.shields.io/badge/Java-21+-orange.svg)](https://openjdk.java.net/)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-1.0.0-green.svg)](https://github.com/aminyo/AminyoMCLib)
-[![Spigot](https://img.shields.io/badge/Spigot-1.7.10--1.21.8-yellow.svg)](https://www.spigotmc.org/)
-[![Paper](https://img.shields.io/badge/Paper-1.8+-red.svg)](https://papermc.io/)
-[![BungeeCord](https://img.shields.io/badge/BungeeCord-Latest-purple.svg)](https://www.spigotmc.org/wiki/bungeecord/)
-[![Velocity](https://img.shields.io/badge/Velocity-3.0+-cyan.svg)](https://velocitypowered.com/)
+*Supporting Spigot • Paper • BungeeCord • Velocity*
 
-> **Una libreria Minecraft moderna e completa per sviluppatori Java**
+[📖 Documentation](#-documentation) • 
+[🚀 Quick Start](#-quick-start) • 
+[💡 Examples](#-examples) • 
+[🆘 Support](#-support)
 
-AminyoMCLib è una libreria multipiattaforma progettata per semplificare lo sviluppo di plugin Minecraft, supportando Spigot, Paper, BungeeCord, Velocity e altre piattaforme popolari.
+</div>
 
 ---
 
-## 📋 Indice
+## ✨ **What is AminyoMCLib?**
 
-- [✨ Caratteristiche](#-caratteristiche)
-- [🎯 Piattaforme Supportate](#-piattaforme-supportate)
-- [⚡ Installazione](#-installazione)
-- [🚀 Guida Rapida](#-guida-rapida)
-- [📚 Documentazione](#-documentazione)
-- [🛠️ Moduli](#️-moduli)
-- [💾 Database](#-database)
-- [📁 File Manager](#-file-manager)
-- [🎨 Utilities](#-utilities)
-- [📖 Esempi](#-esempi)
-- [🤝 Contribuire](#-contribuire)
-- [📜 Licenza](#-licenza)
+AminyoMCLib is a **modern, lightweight, and modular** Java library designed specifically for Minecraft plugin developers. It provides essential tools for database management, file handling, utilities, and platform-specific implementations - all while keeping your plugins as small as possible.
 
----
+### 🎯 **Why Choose AminyoMCLib?**
 
-## ✨ Caratteristiche
-
-### 🎯 **Multipiattaforma**
-- ✅ **Spigot/Bukkit** (1.7.10 - 1.21.8)
-- ✅ **Paper** (1.8+)
-- ✅ **BungeeCord** (Tutte le versioni)
-- ✅ **Velocity** (3.0+)
-- ✅ **Waterfall** (Compatibile con BungeeCord)
-
-### 🚀 **Funzionalità Avanzate**
-- 🔥 **API Unificata** - Un'unica API per tutte le piattaforme
-- 🗄️ **Database Manager** - MySQL, PostgreSQL, MongoDB, SQLite, H2, JSON
-- 📁 **File Manager** - YAML, JSON, TOML, Properties con auto-reload
-- 🎨 **Text Utils** - Colori hex, formattazione, progress bar
-- ⚡ **Async/Sync** - Operazioni asincrone e sincrone
-- 🧰 **Utilities** - Math, Time, Location, Player, Reflection
-- 🎯 **Version Support** - Compatibilità tra versioni diverse
-
-### 💡 **Developer Friendly**
-- 📖 **Documentazione Completa**
-- 🧪 **Esempi Pratici**
-- 🔧 **Setup Semplice**
-- 🚀 **Performance Ottimizzate**
+<table>
+<tr>
+<td align="center">
+<img src="https://img.icons8.com/color/48/module.png" width="32"/>
+<br><b>Modular Design</b><br>
+Include only what you need
+</td>
+<td align="center">
+<img src="https://img.icons8.com/color/48/lightweight.png" width="32"/>
+<br><b>Lightweight</b><br>
+From 500KB to 15MB based on needs
+</td>
+<td align="center">
+<img src="https://img.icons8.com/color/48/database.png" width="32"/>
+<br><b>Multi-Database</b><br>
+MySQL, PostgreSQL, MongoDB, SQLite, H2
+</td>
+<td align="center">
+<img src="https://img.icons8.com/color/48/java-coffee-cup-logo.png" width="32"/>
+<br><b>Java 8+</b><br>
+Compatible with all MC versions
+</td>
+</tr>
+</table>
 
 ---
 
-## 🎯 Piattaforme Supportate
+## 📦 **Modules Overview**
 
-| Piattaforma | Versioni | Stato | Note |
-|-------------|----------|-------|------|
-| ![Spigot](https://img.shields.io/badge/Spigot-orange) | 1.7.10 - 1.21.8 | ✅ Completo | Tutte le funzionalità |
-| ![Paper](https://img.shields.io/badge/Paper-red) | 1.8+ | ✅ Completo | Ottimizzazioni extra |
-| ![Bukkit](https://img.shields.io/badge/Bukkit-blue) | 1.7.10+ | ✅ Completo | Compatibilità legacy |
-| ![BungeeCord](https://img.shields.io/badge/BungeeCord-purple) | Tutte | ✅ Completo | Proxy features |
-| ![Velocity](https://img.shields.io/badge/Velocity-cyan) | 3.0+ | 🚧 In sviluppo | Prossima versione |
-| ![Waterfall](https://img.shields.io/badge/Waterfall-teal) | Tutte | ✅ Compatibile | Via BungeeCord API |
+AminyoMCLib is built with a **modular architecture** - choose exactly what you need:
+
+<details>
+<summary><b>🔧 aminyo-core</b> <code>~50KB</code></summary>
+
+**Essential interfaces and base classes**
+- Core abstractions for all modules
+- Platform-independent foundation
+- Required by all other modules
+
+```java
+// Base interfaces for extensibility
+DatabaseManager manager = new HikariDatabaseManager();
+ConfigurationFile config = new YamlConfiguration();
+```
+</details>
+
+<details>
+<summary><b>📄 aminyo-file</b> <code>~500KB</code></summary>
+
+**Configuration and file management**
+- YAML, JSON, TOML support
+- Auto-save and reload functionality  
+- Comments preservation
+- Path-based value access
+
+```java
+YamlManager yaml = new YamlManager("config.yml");
+yaml.set("database.host", "localhost");
+yaml.save();
+
+String host = yaml.getString("database.host", "localhost");
+```
+</details>
+
+<details>
+<summary><b>🗄️ aminyo-database</b> <code>~12MB</code></summary>
+
+**Complete database solution**
+- Connection pooling (HikariCP)
+- Multi-database support (MySQL, PostgreSQL, MongoDB, SQLite, H2)
+- Async operations
+- Migration system
+- Query builders
+
+```java
+DatabaseManager db = DatabaseManager.create()
+    .type(DatabaseType.MYSQL)
+    .host("localhost")
+    .database("minecraft")
+    .build();
+
+db.executeAsync("CREATE TABLE users (id INT, name VARCHAR(50))");
+```
+</details>
+
+<details>
+<summary><b>🛠️ aminyo-utils</b> <code>~150KB</code></summary>
+
+**Essential utilities for Minecraft**
+- Text formatting and color codes
+- Location and world utilities
+- Math and calculation helpers
+- Time and duration formatting
+- Reflection utilities
+
+```java
+String colored = TextUtils.colorize("&aHello &bWorld!");
+Location center = LocationUtils.getCenter(loc1, loc2);
+String timeAgo = TimeUtils.formatDuration(System.currentTimeMillis() - timestamp);
+```
+</details>
+
+<details>
+<summary><b>🎮 Platform Modules</b> <code>~100KB each</code></summary>
+
+**Platform-specific implementations**
+- `aminyo-platform-spigot` - Spigot/Paper integration
+- `aminyo-platform-bungee` - BungeeCord integration  
+- `aminyo-platform-velocity` - Velocity integration
+
+```java
+// Spigot-specific features
+SpigotPlayerManager players = new SpigotPlayerManager();
+SpigotInventoryBuilder inv = new SpigotInventoryBuilder("GUI", 27);
+```
+</details>
+
+<details>
+<summary><b>🎯 aminyo-all</b> <code>~15MB</code></summary>
+
+**Complete package with everything included**
+- All modules bundled together
+- All dependencies shaded and relocated
+- Perfect for complex plugins
+- One dependency to rule them all
+
+```java
+// Everything available
+DatabaseManager db = new HikariDatabaseManager();
+YamlManager config = new YamlManager("config.yml");
+SpigotPlayerManager players = new SpigotPlayerManager();
+```
+</details>
 
 ---
 
-## ⚡ Installazione
+## 🚀 **Quick Start**
 
-### 📥 Maven
+### 📋 **Prerequisites**
+
+- Java 8 or higher
+- Maven or Gradle build tool
+- Minecraft server (Spigot/Paper/BungeeCord/Velocity)
+
+### 🔨 **Installation**
+
+#### 1. Add JitPack Repository
+
+<details>
+<summary><b>Maven</b></summary>
+
+```xml
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+```
+</details>
+
+<details>
+<summary><b>Gradle</b></summary>
+
+```gradle
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+```
+</details>
+
+#### 2. Choose Your Modules
+
+<div align="center">
+
+| Use Case | Modules | Size | Dependencies |
+|----------|---------|------|--------------|
+| **Config Only** | `aminyo-file` | ~500KB | YAML, JSON, TOML |
+| **Database Only** | `aminyo-database` | ~12MB | All DB drivers |
+| **Utils Only** | `aminyo-utils` | ~150KB | Text, Math, Location |
+| **Everything** | `aminyo-all` | ~15MB | Complete solution |
+
+</div>
+
+#### 3. Add Dependencies
+
+<details>
+<summary><b>🎯 For Simple Plugins (Config Management)</b></summary>
 
 ```xml
 <dependency>
-    <groupId>it.aminyo</groupId>
-    <artifactId>aminyo-mclib</artifactId>
-    <version>1.0.0</version>
+    <groupId>com.github.aminyo.aminyo-mclib</groupId>
+    <artifactId>aminyo-file</artifactId>
+    <version>v1.0.0</version>
 </dependency>
 ```
 
-### 📥 Gradle
+**Perfect for:** Configuration management, simple data storage, lightweight plugins
+</details>
 
-```groovy
-implementation 'it.aminyo:aminyo-mclib:1.0.0'
+<details>
+<summary><b>🗄️ For Database-Driven Plugins</b></summary>
+
+```xml
+<dependencies>
+    <dependency>
+        <groupId>com.github.aminyo.aminyo-mclib</groupId>
+        <artifactId>aminyo-file</artifactId>
+        <version>v1.0.0</version>
+    </dependency>
+    <dependency>
+        <groupId>com.github.aminyo.aminyo-mclib</groupId>
+        <artifactId>aminyo-database</artifactId>
+        <version>v1.0.0</version>
+    </dependency>
+</dependencies>
 ```
 
-### 📦 JAR Download
+**Perfect for:** Economy plugins, player data, statistics, rankings
+</details>
 
-Scarica l'ultima versione da [GitHub Releases](https://github.com/aminyo/AminyoMCLib/releases)
+<details>
+<summary><b>🚀 For Complex Plugins (All Features)</b></summary>
 
----
+```xml
+<dependency>
+    <groupId>com.github.aminyo.aminyo-mclib</groupId>
+    <artifactId>aminyo-all</artifactId>
+    <version>v1.0.0</version>
+</dependency>
+```
 
-## 🚀 Guida Rapida
+**Perfect for:** Large plugins, server networks, enterprise solutions
+</details>
 
-### 🔧 Setup Base
-
-#### **Per Spigot/Paper**
+### ⚡ **5-Minute Setup Example**
 
 ```java
-public class MioPlugin extends JavaPlugin {
-    private AminyoMCLib aminyoLib;
+public class MyPlugin extends JavaPlugin {
+    private YamlManager config;
+    private DatabaseManager database;
     
     @Override
     public void onEnable() {
-        // Inizializza AminyoMCLib
-        SpigotPlatformAdapter adapter = new SpigotPlatformAdapter(this);
-        this.aminyoLib = AminyoMCLibImpl.initialize(adapter);
+        // Initialize config
+        config = new YamlManager(this, "config.yml");
+        config.addDefault("database.type", "sqlite");
+        config.addDefault("database.file", "data.db");
+        config.save();
         
-        getLogger().info("Plugin abilitato con AminyoMCLib!");
+        // Initialize database
+        database = DatabaseManager.builder()
+            .type(DatabaseType.SQLITE)
+            .file(new File(getDataFolder(), config.getString("database.file")))
+            .build();
+            
+        database.connect();
         
-        // Esempio: Comando semplice
-        registerCommand(new MioComando(this));
+        getLogger().info("Plugin enabled with AminyoMCLib!");
     }
     
     @Override
     public void onDisable() {
-        if (aminyoLib != null) {
-            aminyoLib.shutdown();
+        if (database != null) {
+            database.disconnect();
         }
     }
 }
 ```
 
-#### **Per BungeeCord**
-
-```java
-public class MioPlugin extends Plugin {
-    private AminyoMCLib aminyoLib;
-    
-    @Override
-    public void onEnable() {
-        // Inizializza AminyoMCLib
-        BungeePlatformAdapter adapter = new BungeePlatformAdapter(this);
-        this.aminyoLib = AminyoMCLibImpl.initialize(adapter);
-        
-        getLogger().info("Plugin abilitato con AminyoMCLib!");
-    }
-}
-```
-
-### 💬 Primo Comando
-
-```java
-public class MioComando extends SpigotCommand {
-    
-    public MioComando(JavaPlugin plugin) {
-        super(plugin, "test", "mioplugin.test", "Comando di test");
-    }
-    
-    @Override
-    protected void execute(CommandSender sender, String[] args) {
-        // Messaggio colorato
-        sendMessage(sender, "&aHello &b{player}&a!", 
-            Map.of("player", sender.getName()));
-        
-        // Info piattaforma
-        AminyoMCLib lib = AminyoMCLibImpl.getInstance();
-        sendMessage(sender, "&7Platform: &f" + lib.getPlatformAdapter().getPlatformType());
-        sendMessage(sender, "&7Version: &f" + lib.getPlatformAdapter().getMinecraftVersion());
-    }
-}
-```
-
 ---
 
-## 📚 Documentazione
+## 💡 **Examples**
 
-### 🏗️ Architettura
+### 🗄️ **Database Operations**
 
-AminyoMCLib è costruita con un'architettura modulare che separa le funzionalità specifiche della piattaforma dall'API comune:
-
-```
-AminyoMCLib
-├── 🏛️ Core API (Interfaces comuni)
-├── 🎯 Platform Adapters (Spigot, BungeeCord, etc.)
-├── 🗄️ Database Module (MySQL, MongoDB, JSON, etc.)
-├── 📁 File Module (YAML, JSON, TOML, Properties)
-└── 🧰 Utils Module (Text, Math, Time, Player, etc.)
-```
-
-### 🔌 Platform Adapter
-
-Il `PlatformAdapter` fornisce un'interfaccia unificata per tutte le piattaforme:
+<details>
+<summary><b>MySQL Connection with Connection Pooling</b></summary>
 
 ```java
-public interface PlatformAdapter {
-    PlatformType getPlatformType();
-    String getMinecraftVersion();
-    CompletableFuture<Void> runAsync(Runnable task);
-    CompletableFuture<Void> runSync(Runnable task);
-    String getDataFolder();
-    boolean supportsColors();
-}
-```
+DatabaseManager mysql = DatabaseManager.builder()
+    .type(DatabaseType.MYSQL)
+    .host("localhost")
+    .port(3306)
+    .database("minecraft")
+    .username("user")
+    .password("password")
+    .poolSize(10)
+    .build();
 
----
+mysql.connect();
 
-## 🛠️ Moduli
+// Async operations
+mysql.executeAsync("CREATE TABLE IF NOT EXISTS players (uuid VARCHAR(36), name VARCHAR(16), coins INT)")
+    .thenRun(() -> getLogger().info("Table created successfully!"));
 
-### 📊 Panoramica Moduli
-
-| Modulo | Descrizione | Stato |
-|--------|-------------|-------|
-| **Core** | API base e gestione piattaforma | ✅ |
-| **Database** | Gestione database multipli | ✅ |
-| **File** | Manager per file di configurazione | ✅ |
-| **Utils** | Utilities comuni per sviluppo | ✅ |
-| **Command** | Framework per comandi avanzato | ✅ |
-| **Event** | Sistema eventi cross-platform | 🚧 |
-| **GUI** | Menu e interfacce grafiche | 🚧 |
-
----
-
-## 💾 Database
-
-### 🗄️ Database Supportati
-
-AminyoMCLib supporta una vasta gamma di database:
-
-| Database | Tipo | Driver | Esempio |
-|----------|------|--------|---------|
-| **MySQL** | SQL | `mysql-connector-j` | Server produzione |
-| **MariaDB** | SQL | `mariadb-java-client` | Alternative a MySQL |
-| **PostgreSQL** | SQL | `postgresql` | Database enterprise |
-| **SQLite** | SQL | `sqlite-jdbc` | Database locale |
-| **H2** | SQL | `h2` | Testing e sviluppo |
-| **MongoDB** | NoSQL | `mongodb-driver` | Documenti JSON |
-| **JSON** | File | Built-in | Configurazioni semplici |
-
-### ⚙️ Configurazione Database
-
-```java
-// Configurazione MySQL
-DatabaseConfig config = new DatabaseConfig(DatabaseType.MYSQL);
-config.setHost("localhost");
-config.setPort(3306);
-config.setDatabase("minecraft");
-config.setUsername("user");
-config.setPassword("password");
-config.setMaxPoolSize(20);
-
-// Creazione manager
-DatabaseModule dbModule = new DatabaseModule(getDataFolder());
-DatabaseManager dbManager = dbModule.createDatabaseManager("main", config);
-```
-
-### 💡 Esempi Database
-
-#### **Query SQL Sincrone**
-
-```java
-// Esecuzione query
-QueryResult result = dbManager.executeQuery(
-    "SELECT * FROM players WHERE uuid = ?", 
-    playerUuid
-);
-
-// Lettura risultati
-for (Map<String, Object> row : result.getRows()) {
-    String name = (String) row.get("name");
-    int level = (Integer) row.get("level");
-    // Processa dati...
-}
-```
-
-#### **Operazioni Asincrone**
-
-```java
-// Query asincrona
-dbManager.executeQueryAsync("SELECT * FROM stats WHERE player_id = ?", playerId)
+// Query with results
+mysql.queryAsync("SELECT * FROM players WHERE uuid = ?", playerUUID)
     .thenAccept(result -> {
-        // Processa risultati in thread separato
-        updatePlayerStats(result);
-    })
-    .thenRunAsync(() -> {
-        // Torna al thread principale per operazioni Bukkit
-        player.sendMessage("§aStats updated!");
-    }, bukkitScheduler::runTask);
+        if (result.next()) {
+            String name = result.getString("name");
+            int coins = result.getInt("coins");
+            // Handle player data
+        }
+    });
 ```
+</details>
 
-#### **MongoDB Operations**
+<details>
+<summary><b>SQLite for Lightweight Storage</b></summary>
 
 ```java
-MongoDatabaseManager mongoManager = (MongoDatabaseManager) dbManager;
+DatabaseManager sqlite = DatabaseManager.builder()
+    .type(DatabaseType.SQLITE)
+    .file(new File(getDataFolder(), "playerdata.db"))
+    .build();
 
-// Inserimento documento
-Document player = new Document("uuid", playerUuid)
+sqlite.connect();
+
+// Simple operations
+sqlite.execute("INSERT INTO players VALUES (?, ?, ?)", 
+    playerUUID, playerName, coins);
+
+int playerCoins = sqlite.queryInt("SELECT coins FROM players WHERE uuid = ?", 
+    playerUUID);
+```
+</details>
+
+<details>
+<summary><b>MongoDB for Modern Applications</b></summary>
+
+```java
+DatabaseManager mongo = DatabaseManager.builder()
+    .type(DatabaseType.MONGODB)
+    .host("localhost")
+    .port(27017)
+    .database("minecraft")
+    .build();
+
+mongo.connect();
+
+// Document operations
+Document player = new Document("uuid", playerUUID)
     .append("name", playerName)
-    .append("level", 10)
-    .append("lastLogin", new Date());
+    .append("stats", new Document("kills", 0).append("deaths", 0));
 
-mongoManager.insertDocument("players", player)
-    .thenRun(() -> logger.info("Player saved to MongoDB"));
+mongo.getMongoCollection("players").insertOne(player);
+```
+</details>
 
-// Ricerca documenti
-Document filter = new Document("level", new Document("$gte", 50));
-mongoManager.findDocuments("players", filter)
-    .thenAccept(documents -> {
-        logger.info("Found {} high-level players", documents.size());
+### 📄 **Configuration Management**
+
+<details>
+<summary><b>YAML Configuration with Comments</b></summary>
+
+```java
+YamlManager config = new YamlManager(this, "config.yml");
+
+// Set defaults with comments
+config.addDefault("database.host", "localhost", "Database host address");
+config.addDefault("database.port", 3306, "Database port number");
+config.addDefault("features.economy", true, "Enable economy features");
+config.addDefault("messages.welcome", "&aWelcome to the server!", "Welcome message");
+
+// Save with preserved comments
+config.save();
+
+// Easy value access
+String host = config.getString("database.host");
+boolean economyEnabled = config.getBoolean("features.economy");
+List<String> items = config.getStringList("shop.items");
+```
+</details>
+
+<details>
+<summary><b>JSON Configuration for APIs</b></summary>
+
+```java
+JsonManager settings = new JsonManager(this, "api-settings.json");
+
+settings.set("api.endpoints.players", "/api/v1/players");
+settings.set("api.ratelimit.requests", 100);
+settings.set("api.ratelimit.window", "1h");
+
+settings.save();
+
+// Type-safe access
+ApiConfig api = settings.getObject("api", ApiConfig.class);
+```
+</details>
+
+### 🛠️ **Utility Functions**
+
+<details>
+<summary><b>Text Formatting and Colors</b></summary>
+
+```java
+// Color codes
+String colored = TextUtils.colorize("&aSuccess! &7You received &e$100&7.");
+String stripped = TextUtils.stripColor(colored);
+
+// Hex colors (1.16+)
+String hex = TextUtils.colorize("&#FF5733This is orange text");
+
+// Text formatting
+List<String> wrapped = TextUtils.wrapText("Very long text...", 30);
+String centered = TextUtils.centerText("=== WELCOME ===", 50);
+```
+</details>
+
+<details>
+<summary><b>Location and World Utilities</b></summary>
+
+```java
+// Distance calculations
+double distance = LocationUtils.distance2D(loc1, loc2);
+boolean inRange = LocationUtils.isInRange(player.getLocation(), spawn, 100);
+
+// Area operations  
+Location center = LocationUtils.getCenter(corner1, corner2);
+List<Block> blocks = LocationUtils.getBlocksInRadius(center, 5);
+
+// Serialization
+String serialized = LocationUtils.serialize(location);
+Location deserialized = LocationUtils.deserialize(serialized);
+```
+</details>
+
+<details>
+<summary><b>Time and Duration Formatting</b></summary>
+
+```java
+// Duration formatting
+String timeAgo = TimeUtils.formatDuration(System.currentTimeMillis() - timestamp);
+// Output: "2 hours, 30 minutes ago"
+
+String remaining = TimeUtils.formatTime(cooldownEnd - System.currentTimeMillis());
+// Output: "5m 23s"
+
+// Parsing
+long duration = TimeUtils.parseDuration("1h 30m 45s"); // milliseconds
+```
+</details>
+
+---
+
+## 🎮 **Platform Integration**
+
+### 🟡 **Spigot/Paper**
+
+```java
+// Player management
+SpigotPlayerManager players = new SpigotPlayerManager();
+players.sendMessage(player, "&aHello world!");
+players.playSound(player, Sound.ENTITY_EXPERIENCE_ORB_PICKUP);
+
+// Inventory builders
+SpigotInventoryBuilder gui = new SpigotInventoryBuilder("Shop", 27)
+    .setItem(10, new ItemStack(Material.DIAMOND), "Buy Diamonds", "&7Click to purchase")
+    .setClickHandler(10, (player, click) -> {
+        // Handle purchase
     });
 ```
 
----
-
-## 📁 File Manager
-
-### 📝 Formati Supportati
-
-- **YAML** (.yml, .yaml) - Configurazioni readable
-- **JSON** (.json) - Dati strutturati
-- **TOML** (.toml) - Tom's Obvious, Minimal Language  
-- **Properties** (.properties) - Formato Java standard
-
-### 🔧 Utilizzo File Manager
+### 🔴 **BungeeCord**
 
 ```java
-FileManager fileManager = new FileManager(getDataFolder());
+// Cross-server messaging
+BungeePlayerManager players = new BungeePlayerManager();
+players.sendToServer(player, "lobby");
+players.broadcastMessage("&aPlayer " + player.getName() + " joined the network!");
 
-// Carica file YAML
-YamlFileModel config = fileManager.getYamlFile("config.yml");
-
-// Lettura valori
-String serverName = config.getString("server.name", "Default Server");
-int maxPlayers = config.getInt("server.maxPlayers", 100);
-List<String> admins = config.getStringList("server.admins");
-
-// Scrittura valori
-config.set("server.lastRestart", System.currentTimeMillis());
-config.set("stats.totalLogins", config.getInt("stats.totalLogins", 0) + 1);
-
-// Auto-save abilitato
-config.setAutoSave(true); // Salva automaticamente ad ogni modifica
+// Network-wide data
+NetworkDataManager data = new NetworkDataManager();
+data.setPlayerData(player.getUniqueId(), "coins", 1000);
 ```
 
-### 🎛️ Configurazione Avanzata
+### 🟣 **Velocity**
 
 ```java
-// File JSON per dati complessi
-JsonFileModel playerData = fileManager.getJsonFile("players.json");
+// Modern proxy features
+VelocityPlayerManager players = new VelocityPlayerManager();
+players.connectToServer(player, "survival");
 
-// Struttura dati nidificata
-Map<String, Object> playerInfo = Map.of(
-    "uuid", player.getUniqueId().toString(),
-    "stats", Map.of(
-        "kills", 10,
-        "deaths", 3,
-        "playtime", 3600000L
-    ),
-    "locations", Map.of(
-        "home", Map.of(
-            "world", "world",
-            "x", 100.5,
-            "y", 64.0,
-            "z", 200.3
-        )
-    )
-);
-
-playerData.set("players." + player.getName(), playerInfo);
+// Tab list management
+VelocityTabManager tab = new VelocityTabManager();
+tab.setHeaderFooter(player, "&bWelcome to our network", "&7Players online: " + count);
 ```
 
 ---
 
-## 🎨 Utilities
+## ⚙️ **Advanced Configuration**
 
-### 🌈 Text Utils
+### 🔧 **Shading Configuration**
 
-AminyoMCLib offre potenti utilities per la gestione del testo:
-
-```java
-// Colori hex (1.16+) e legacy
-String message = TextUtils.colorize("&aHello &#ff5555World&r!");
-
-// Progress bar personalizzate
-String progressBar = TextUtils.createProgressBar(75, 100, 20, '█', '░');
-// Output: "███████████████░░░░░"
-
-// Centratura testo
-String centeredTitle = TextUtils.center("=== WELCOME ===", 50, ' ');
-
-// Wrap testo
-List<String> wrappedLines = TextUtils.wrapText(longText, 40);
-
-// Placeholder sostituzione
-String welcome = TextUtils.replacePlaceholders(
-    "Welcome {player} to {server}!",
-    Map.of(
-        "player", player.getName(),
-        "server", "MyServer"
-    )
-);
-```
-
-### ⏰ Time Utils
-
-```java
-// Parsing tempo human-friendly
-long duration = TimeUtils.parseTime("1h 30m 45s"); // milliseconds
-
-// Formattazione durata
-String formatted = TimeUtils.formatTime(duration); // "1h 30m 45s"
-
-// Timestamps
-String timestamp = TimeUtils.getCurrentTimestamp(); // "2024-01-15 14:30:25"
-String custom = TimeUtils.getCurrentTimestamp("dd/MM/yyyy HH:mm");
-
-// Controllo scadenza
-boolean expired = TimeUtils.hasElapsed(lastLoginTime, Duration.ofDays(30).toMillis());
-```
-
-### 🧮 Math Utils
-
-```java
-// Clamping valori
-int health = MathUtils.clamp(playerHealth, 0, 20);
-double damage = MathUtils.clamp(baseDamage * multiplier, 0.0, 999.9);
-
-// Numeri random
-int randomLevel = MathUtils.randomInt(1, 100);
-double randomMultiplier = MathUtils.randomDouble(0.8, 1.2);
-
-// Percentuali
-double percentage = MathUtils.percentage(currentXP, maxXP); // 0.0 - 1.0
-
-// Formattazione numeri
-String formatted = MathUtils.formatNumber(123456.789, 2); // "123456.79"
-```
-
-### 📍 Location Utils
-
-```java
-// Location cross-platform
-SimpleLocation loc = new SimpleLocation("world", 100.5, 64, 200.3, 180f, 0f);
-
-// Calcolo distanze
-double distance = LocationUtils.distance(loc1, loc2);
-double distance2D = LocationUtils.distance2D(x1, z1, x2, z2);
-
-// Parsing da stringa
-SimpleLocation parsed = LocationUtils.parseLocation("world:100,64,200:180,0");
-
-// Area checking
-boolean inArea = LocationUtils.isWithinArea(playerLoc, corner1, corner2);
-```
-
-### 👤 Player Utils
-
-```java
-// Validazione nomi
-boolean validName = PlayerUtils.isValidPlayerName("Aminyo"); // true
-boolean validUUID = PlayerUtils.isValidUUID(uuid.toString());
-
-// UUID formatting
-String formatted = PlayerUtils.formatUUID(trimmedUuid);
-String trimmed = PlayerUtils.trimUUID(formattedUuid);
-
-// Per Spigot - utilities specifiche
-Player player = SpigotPlayerUtils.getPlayer("Aminyo");
-SpigotPlayerUtils.sendMessage(player, "&aWelcome back!");
-SpigotPlayerUtils.broadcast("&6Server restarting in 5 minutes!");
-```
-
----
-
-## 📖 Esempi
-
-### 🏆 Plugin Completo di Esempio
-
-```java
-public class ExamplePlugin extends SpigotAminyoPlugin {
-    
-    private FileManager fileManager;
-    private DatabaseModule databaseModule;
-    
-    @Override
-    public void onEnable() {
-        super.onEnable(); // Inizializza AminyoMCLib
-        
-        // Setup file manager
-        this.fileManager = new FileManager(getDataFolder().getAbsolutePath());
-        
-        // Carica configurazione
-        YamlFileModel config = fileManager.getYamlFile("config.yml");
-        setupDefaultConfig(config);
-        
-        // Setup database se abilitato
-        if (config.getBoolean("database.enabled", false)) {
-            setupDatabase(config);
-        }
-        
-        // Registra comandi e listener
-        registerCommands();
-        registerListeners();
-        
-        getLogger().info("ExamplePlugin abilitato!");
-    }
-    
-    private void setupDefaultConfig(YamlFileModel config) {
-        // Valori di default
-        Map<String, Object> defaults = Map.of(
-            "plugin.name", "ExamplePlugin",
-            "plugin.prefix", "&8[&6Example&8] ",
-            "database.enabled", false,
-            "database.type", "SQLITE",
-            "database.file", "data.db",
-            "features.welcomeMessage", true,
-            "features.autoSave", true,
-            "messages.welcome", "&aWelcome {player} to the server!",
-            "messages.goodbye", "&cGoodbye {player}!"
-        );
-        
-        defaults.forEach((key, value) -> {
-            if (!config.contains(key)) {
-                config.set(key, value);
-            }
-        });
-        
-        config.save();
-    }
-    
-    private void setupDatabase(YamlFileModel config) {
-        this.databaseModule = new DatabaseModule(getDataFolder().getAbsolutePath());
-        databaseModule.enable();
-        
-        // Configura database
-        DatabaseConfig dbConfig = new DatabaseConfig(
-            DatabaseType.valueOf(config.getString("database.type", "SQLITE"))
-        );
-        
-        if (dbConfig.getType().isFile()) {
-            dbConfig.setFilePath(config.getString("database.file", "data.db"));
-        } else {
-            dbConfig.setHost(config.getString("database.host", "localhost"));
-            dbConfig.setPort(config.getInt("database.port", 3306));
-            dbConfig.setDatabase(config.getString("database.name", "minecraft"));
-            dbConfig.setUsername(config.getString("database.username", "root"));
-            dbConfig.setPassword(config.getString("database.password", ""));
-        }
-        
-        try {
-            DatabaseManager dbManager = databaseModule.createDatabaseManager("main", dbConfig);
-            
-            // Crea tabelle se necessario
-            createTables(dbManager);
-            
-            getLogger().info("Database connesso: " + dbConfig.getType());
-        } catch (Exception e) {
-            getLogger().severe("Errore connessione database: " + e.getMessage());
-        }
-    }
-    
-    private void createTables(DatabaseManager dbManager) throws Exception {
-        // Tabella giocatori
-        dbManager.executeUpdate("""
-            CREATE TABLE IF NOT EXISTS players (
-                id INTEGER PRIMARY KEY AUTO_INCREMENT,
-                uuid VARCHAR(36) UNIQUE NOT NULL,
-                name VARCHAR(16) NOT NULL,
-                first_join BIGINT NOT NULL,
-                last_join BIGINT NOT NULL,
-                total_playtime BIGINT DEFAULT 0,
-                level INTEGER DEFAULT 1,
-                experience BIGINT DEFAULT 0
-            )
-        """);
-        
-        // Indici per performance
-        dbManager.executeUpdate("CREATE INDEX IF NOT EXISTS idx_players_uuid ON players(uuid)");
-        dbManager.executeUpdate("CREATE INDEX IF NOT EXISTS idx_players_name ON players(name)");
-    }
-    
-    private void registerCommands() {
-        registerCommand(new InfoCommand(this));
-        registerCommand(new StatsCommand(this));
-        registerCommand(new ReloadCommand(this));
-    }
-    
-    private void registerListeners() {
-        registerListener(new PlayerJoinListener(this));
-        registerListener(new PlayerQuitListener(this));
-    }
-}
-```
-
-### 🎯 Comando Avanzato
-
-```java
-public class StatsCommand extends SpigotCommand {
-    
-    private final ExamplePlugin plugin;
-    private final DatabaseManager dbManager;
-    
-    public StatsCommand(ExamplePlugin plugin) {
-        super(plugin, "stats", "example.stats", "View player statistics");
-        this.plugin = plugin;
-        this.dbManager = plugin.getDatabaseModule().getDatabaseManager("main");
-    }
-    
-    @Override
-    protected void execute(CommandSender sender, String[] args) {
-        if (!isPlayer(sender)) {
-            sendMessage(sender, "&cThis command can only be used by players!");
-            return;
-        }
-        
-        Player player = getPlayer(sender);
-        String targetPlayer = args.length > 0 ? args[0] : player.getName();
-        
-        // Query asincrona per non bloccare il server
-        dbManager.executeQueryAsync(
-            "SELECT * FROM players WHERE name = ? OR uuid = ?",
-            targetPlayer, targetPlayer
-        ).thenAccept(result -> {
-            
-            if (result.isEmpty()) {
-                sendMessage(sender, "&cPlayer not found: " + targetPlayer);
-                return;
-            }
-            
-            Map<String, Object> data = result.getFirstRow();
-            
-            // Torna al thread principale per inviare il messaggio
-            plugin.getScheduler().runSync(() -> {
-                sendStatsMessage(sender, data);
-            });
-            
-        }).exceptionally(throwable -> {
-            plugin.getLogger().severe("Error querying player stats: " + throwable.getMessage());
-            sendMessage(sender, "&cError retrieving stats!");
-            return null;
-        });
-    }
-    
-    private void sendStatsMessage(CommandSender sender, Map<String, Object> data) {
-        String name = (String) data.get("name");
-        long firstJoin = (Long) data.get("first_join");
-        long lastJoin = (Long) data.get("last_join");
-        long playtime = (Long) data.get("total_playtime");
-        int level = (Integer) data.get("level");
-        long experience = (Long) data.get("experience");
-        
-        // Header decorativo
-        sendMessage(sender, "");
-        sendMessage(sender, "&6&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬");
-        sendMessage(sender, TextUtils.center("&6&lPLAYER STATS", 30, ' '));
-        sendMessage(sender, "&6&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬");
-        
-        // Statistiche
-        sendMessage(sender, "");
-        sendMessage(sender, "&7Player: &f" + name);
-        sendMessage(sender, "&7Level: &a" + level + " &8(&7" + experience + " XP&8)");
-        sendMessage(sender, "&7First Join: &b" + TimeUtils.formatTime(System.currentTimeMillis() - firstJoin) + " ago");
-        sendMessage(sender, "&7Last Seen: &b" + TimeUtils.formatTime(System.currentTimeMillis() - lastJoin) + " ago");
-        sendMessage(sender, "&7Playtime: &e" + TimeUtils.formatTime(playtime));
-        
-        // Progress bar XP
-        long xpToNext = (level + 1) * 1000L;
-        long currentLevelXP = experience - (level * 1000L);
-        String xpBar = TextUtils.createProgressBar(currentLevelXP, 1000, 20, '█', '▒');
-        sendMessage(sender, "&7XP Progress: &a" + xpBar + " &7(" + currentLevelXP + "/1000)");
-        
-        sendMessage(sender, "&6&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬");
-        sendMessage(sender, "");
-    }
-    
-    @Override
-    protected List<String> tabComplete(CommandSender sender, String[] args) {
-        if (args.length == 1) {
-            return SpigotPlayerUtils.getOnlinePlayerNames().stream()
-                    .filter(name -> name.toLowerCase().startsWith(args[0].toLowerCase()))
-                    .collect(Collectors.toList());
-        }
-        return new ArrayList<>();
-    }
-}
-```
-
----
-
-## 🤝 Contribuire
-
-Contributi sono benvenuti! Segui questi passi:
-
-### 🍴 Fork e Setup
-
-```bash
-# Fork del repository
-git clone https://github.com/tuousername/AminyoMCLib.git
-cd AminyoMCLib
-
-# Setup ambiente sviluppo
-./gradlew build
-```
-
-### 🔧 Linee Guida
-
-1. **Java 21+** - Usa le ultime feature di Java
-2. **Codice Pulito** - Segui le convenzioni Java
-3. **Test** - Aggiungi test per nuove feature
-4. **Documentazione** - Documenta le API pubbliche
-5. **Commit Convention** - Usa conventional commits
-
-### 📝 Esempio Commit
-
-```bash
-feat(database): add Redis support for caching
-fix(spigot): resolve compatibility issue with 1.7.10
-docs(readme): update installation instructions
-test(utils): add tests for TimeUtils parsing
-```
-
-### 🎯 Aree di Contributo
-
-- 🐛 **Bug Fixes** - Risolvi problemi esistenti
-- ✨ **Nuove Feature** - Aggiungi funzionalità
-- 📚 **Documentazione** - Migliora guide e esempi  
-- 🧪 **Testing** - Espandi la copertura test
-- 🎨 **Performance** - Ottimizza il codice
-- 🌍 **Localizzazione** - Traduci in altre lingue
-
----
-
-## 🆘 Supporto
-
-### 📞 Canali di Supporto
-
-- 🐛 **Issues**: [GitHub Issues](https://github.com/aminyo/AminyoMCLib/issues)
-- 💬 **Discord**: [Server Discord](https://discord.gg/aminyo)
-- 📧 **Email**: support@aminyo.it
-- 📖 **Wiki**: [Documentazione Completa](https://github.com/aminyo/AminyoMCLib/wiki)
-
-### ❓ FAQ
-
-<details>
-<summary><strong>AminyoMCLib è compatibile con la mia versione di Minecraft?</strong></summary>
-
-AminyoMCLib supporta versioni da 1.7.10 a 1.21.8 per Spigot/Paper, tutte le versioni di BungeeCord, e Velocity 3.0+. Controlla la tabella compatibilità sopra.
-</details>
-
-<details>
-<summary><strong>Posso usare AminyoMCLib in progetti commerciali?</strong></summary>
-
-Sì! AminyoMCLib è rilasciata sotto licenza MIT, che permette uso commerciale, modifica e distribuzione.
-</details>
-
-<details>
-<summary><strong>Come posso migrare da altre librerie?</strong></summary>
-
-Forniamo guide di migrazione per librerie popolari come HikariCP, SnakeYAML, etc. Controlla la sezione Wiki.
-</details>
-
-<details>
-<summary><strong>AminyoMCLib supporta Kotlin?</strong></summary>
-
-Sì! Essendo una libreria Java, è completamente compatibile con Kotlin e tutti i linguaggi JVM.
-</details>
-
----
-
-## 🎉 Ringraziamenti
-
-Un ringraziamento speciale a:
-
-- 🎯 **Spigot Team** - Per l'incredibile API
-- 🚀 **Paper Team** - Per le ottimizzazioni performance
-- 🌐 **BungeeCord/Velocity** - Per il supporto proxy
-- 🛠️ **HikariCP** - Per il connection pooling
-- 📊 **MongoDB** - Per il supporto NoSQL
-- 🎨 **SnakeYAML** - Per il parsing YAML
-- 💾 **H2/SQLite** - Per i database embedded
-- 🧪 **JUnit** - Per il framework testing
-- ❤️ **Community** - Per feedback e contributi
-
----
-
-## 📜 Licenza
-
-```
-MIT License
-
-Copyright (c) 2024 Aminyo
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the
----
-
-## 📋 Indice
-
-- [✨ Caratteristiche](#-caratteristiche)
-- [🎯 Piattaforme Supportate](#-piattaforme-supportate)
-- [⚡ Installazione](#-installazione)
-- [🚀 Guida Rapida](#-guida-rapida)
-- [📚 Documentazione](#-documentazione)
-- [🛠️ Moduli](#️-moduli)
-- [💾 Database](#-database)
-- [📁 File Manager](#-file-manager)
-- [🎨 Utilities](#-utilities)
-- [📖 Esempi](#-esempi)
-- [🤝 Contribuire](#-contribuire)
-- [📜 Licenza](#-licenza)
-
----
-
-## ✨ Caratteristiche
-
-### 🎯 **Multipiattaforma**
-- ✅ **Spigot/Bukkit** (1.7.10 - 1.21.8)
-- ✅ **Paper** (1.8+)
-- ✅ **BungeeCord** (Tutte le versioni)
-- ✅ **Velocity** (3.0+)
-- ✅ **Waterfall** (Compatibile con BungeeCord)
-
-### 🚀 **Funzionalità Avanzate**
-- 🔥 **API Unificata** - Un'unica API per tutte le piattaforme
-- 🗄️ **Database Manager** - MySQL, PostgreSQL, MongoDB, SQLite, H2, JSON
-- 📁 **File Manager** - YAML, JSON, TOML, Properties con auto-reload
-- 🎨 **Text Utils** - Colori hex, formattazione, progress bar
-- ⚡ **Async/Sync** - Operazioni asincrone e sincrone
-- 🧰 **Utilities** - Math, Time, Location, Player, Reflection
-- 🎯 **Version Support** - Compatibilità tra versioni diverse
-
-### 💡 **Developer Friendly**
-- 📖 **Documentazione Completa**
-- 🧪 **Esempi Pratici**
-- 🔧 **Setup Semplice**
-- 🚀 **Performance Ottimizzate**
-
----
-
-## 🎯 Piattaforme Supportate
-
-| Piattaforma | Versioni | Stato | Note |
-|-------------|----------|-------|------|
-| ![Spigot](https://img.shields.io/badge/Spigot-orange) | 1.7.10 - 1.21.8 | ✅ Completo | Tutte le funzionalità |
-| ![Paper](https://img.shields.io/badge/Paper-red) | 1.8+ | ✅ Completo | Ottimizzazioni extra |
-| ![Bukkit](https://img.shields.io/badge/Bukkit-blue) | 1.7.10+ | ✅ Completo | Compatibilità legacy |
-| ![BungeeCord](https://img.shields.io/badge/BungeeCord-purple) | Tutte | ✅ Completo | Proxy features |
-| ![Velocity](https://img.shields.io/badge/Velocity-cyan) | 3.0+ | 🚧 In sviluppo | Prossima versione |
-| ![Waterfall](https://img.shields.io/badge/Waterfall-teal) | Tutte | ✅ Compatibile | Via BungeeCord API |
-
----
-
-## ⚡ Installazione
-
-### 📥 Maven
+When using individual modules, add this to your plugin's `pom.xml`:
 
 ```xml
-<dependency>
-    <groupId>it.aminyo</groupId>
-    <artifactId>aminyo-mclib</artifactId>
-    <version>1.0.0</version>
-</dependency>
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-shade-plugin</artifactId>
+    <version>3.5.1</version>
+    <configuration>
+        <relocations>
+            <!-- Relocate AminyoMCLib dependencies to avoid conflicts -->
+            <relocation>
+                <pattern>com.zaxxer.hikari</pattern>
+                <shadedPattern>your.plugin.libs.hikari</shadedPattern>
+            </relocation>
+            <relocation>
+                <pattern>org.yaml.snakeyaml</pattern>
+                <shadedPattern>your.plugin.libs.snakeyaml</shadedPattern>
+            </relocation>
+        </relocations>
+    </configuration>
+</plugin>
 ```
 
-### 📥 Gradle
-
-```groovy
-implementation 'it.aminyo:aminyo-mclib:1.0.0'
-```
-
-### 📦 JAR Download
-
-Scarica l'ultima versione da [GitHub Releases](https://github.com/aminyo/AminyoMCLib/releases)
-
----
-
-## 🚀 Guida Rapida
-
-### 🔧 Setup Base
-
-#### **Per Spigot/Paper**
+### 📊 **Performance Tuning**
 
 ```java
-public class MioPlugin extends JavaPlugin {
-    private AminyoMCLib aminyoLib;
-    
-    @Override
-    public void onEnable() {
-        // Inizializza AminyoMCLib
-        SpigotPlatformAdapter adapter = new SpigotPlatformAdapter(this);
-        this.aminyoLib = AminyoMCLibImpl.initialize(adapter);
-        
-        getLogger().info("Plugin abilitato con AminyoMCLib!");
-        
-        // Esempio: Comando semplice
-        registerCommand(new MioComando(this));
-    }
-    
-    @Override
-    public void onDisable() {
-        if (aminyoLib != null) {
-            aminyoLib.shutdown();
-        }
-    }
-}
-```
+// Database optimization
+DatabaseManager db = DatabaseManager.builder()
+    .type(DatabaseType.MYSQL)
+    .host("localhost")
+    .database("minecraft")
+    .poolSize(20)              // Increase for high traffic
+    .connectionTimeout(5000)   // 5 second timeout
+    .maxLifetime(1800000)      // 30 minute max connection life
+    .build();
 
-#### **Per BungeeCord**
-
-```java
-public class MioPlugin extends Plugin {
-    private AminyoMCLib aminyoLib;
-    
-    @Override
-    public void onEnable() {
-        // Inizializza AminyoMCLib
-        BungeePlatformAdapter adapter = new BungeePlatformAdapter(this);
-        this.aminyoLib = AminyoMCLibImpl.initialize(adapter);
-        
-        getLogger().info("Plugin abilitato con AminyoMCLib!");
-    }
-}
-```
-
-### 💬 Primo Comando
-
-```java
-public class MioComando extends SpigotCommand {
-    
-    public MioComando(JavaPlugin plugin) {
-        super(plugin, "test", "mioplugin.test", "Comando di test");
-    }
-    
-    @Override
-    protected void execute(CommandSender sender, String[] args) {
-        // Messaggio colorato
-        sendMessage(sender, "&aHello &b{player}&a!", 
-            Map.of("player", sender.getName()));
-        
-        // Info piattaforma
-        AminyoMCLib lib = AminyoMCLibImpl.getInstance();
-        sendMessage(sender, "&7Platform: &f" + lib.getPlatformAdapter().getPlatformType());
-        sendMessage(sender, "&7Version: &f" + lib.getPlatformAdapter().getMinecraftVersion());
-    }
-}
+// File caching
+YamlManager config = new YamlManager(this, "config.yml")
+    .enableCaching(true)       // Cache parsed values
+    .autoSave(false)          // Disable auto-save for performance
+    .saveInterval(300);       // Save every 5 minutes
 ```
 
 ---
 
-## 📚 Documentazione
+## 📊 **Version Compatibility**
 
-### 🏗️ Architettura
+<div align="center">
 
-AminyoMCLib è costruita con un'architettura modulare che separa le funzionalità specifiche della piattaforma dall'API comune:
+| Minecraft Version | AminyoMCLib | Java | Status |
+|------------------|-------------|------|--------|
+| 1.21.x | ✅ v1.0.0+ | 8+ | ✅ Fully Supported |
+| 1.20.x | ✅ v1.0.0+ | 8+ | ✅ Fully Supported |
+| 1.19.x | ✅ v1.0.0+ | 8+ | ✅ Fully Supported |
+| 1.18.x | ✅ v1.0.0+ | 8+ | ✅ Fully Supported |
+| 1.17.x | ✅ v1.0.0+ | 8+ | ✅ Fully Supported |
+| 1.16.x | ✅ v1.0.0+ | 8+ | ✅ Fully Supported |
+| 1.15.x | ⚠️ v1.0.0+ | 8+ | ⚠️ Limited Testing |
+| 1.14.x | ⚠️ v1.0.0+ | 8+ | ⚠️ Limited Testing |
+| 1.13.x | ❌ Not Supported | - | ❌ EOL |
 
-```
-AminyoMCLib
-├── 🏛️ Core API (Interfaces comuni)
-├── 🎯 Platform Adapters (Spigot, BungeeCord, etc.)
-├── 🗄️ Database Module (MySQL, MongoDB, JSON, etc.)
-├── 📁 File Module (YAML, JSON, TOML, Properties)
-└── 🧰 Utils Module (Text, Math, Time, Player, etc.)
-```
-
-### 🔌 Platform Adapter
-
-Il `PlatformAdapter` fornisce un'interfaccia unificata per tutte le piattaforme:
-
-```java
-public interface PlatformAdapter {
-    PlatformType getPlatformType();
-    String getMinecraftVersion();
-    CompletableFuture<Void> runAsync(Runnable task);
-    CompletableFuture<Void> runSync(Runnable task);
-    String getDataFolder();
-    boolean supportsColors();
-}
-```
+</div>
 
 ---
 
-## 🛠️ Moduli
+## 🧪 **Testing**
 
-### 📊 Panoramica Moduli
-
-| Modulo | Descrizione | Stato |
-|--------|-------------|-------|
-| **Core** | API base e gestione piattaforma | ✅ |
-| **Database** | Gestione database multipli | ✅ |
-| **File** | Manager per file di configurazione | ✅ |
-| **Utils** | Utilities comuni per sviluppo | ✅ |
-| **Command** | Framework per comandi avanzato | ✅ |
-| **Event** | Sistema eventi cross-platform | 🚧 |
-| **GUI** | Menu e interfacce grafiche | 🚧 |
-
----
-
-## 💾 Database
-
-### 🗄️ Database Supportati
-
-AminyoMCLib supporta una vasta gamma di database:
-
-| Database | Tipo | Driver | Esempio |
-|----------|------|--------|---------|
-| **MySQL** | SQL | `mysql-connector-j` | Server produzione |
-| **MariaDB** | SQL | `mariadb-java-client` | Alternative a MySQL |
-| **PostgreSQL** | SQL | `postgresql` | Database enterprise |
-| **SQLite** | SQL | `sqlite-jdbc` | Database locale |
-| **H2** | SQL | `h2` | Testing e sviluppo |
-| **MongoDB** | NoSQL | `mongodb-driver` | Documenti JSON |
-| **JSON** | File | Built-in | Configurazioni semplici |
-
-### ⚙️ Configurazione Database
-
-```java
-// Configurazione MySQL
-DatabaseConfig config = new DatabaseConfig(DatabaseType.MYSQL);
-config.setHost("localhost");
-config.setPort(3306);
-config.setDatabase("minecraft");
-config.setUsername("user");
-config.setPassword("password");
-config.setMaxPoolSize(20);
-
-// Creazione manager
-DatabaseModule dbModule = new DatabaseModule(getDataFolder());
-DatabaseManager dbManager = dbModule.createDatabaseManager("main", config);
-```
-
-### 💡 Esempi Database
-
-#### **Query SQL Sincrone**
-
-```java
-// Esecuzione query
-QueryResult result = dbManager.executeQuery(
-    "SELECT * FROM players WHERE uuid = ?", 
-    playerUuid
-);
-
-// Lettura risultati
-for (Map<String, Object> row : result.getRows()) {
-    String name = (String) row.get("name");
-    int level = (Integer) row.get("level");
-    // Processa dati...
-}
-```
-
-#### **Operazioni Asincrone**
-
-```java
-// Query asincrona
-dbManager.executeQueryAsync("SELECT * FROM stats WHERE player_id = ?", playerId)
-    .thenAccept(result -> {
-        // Processa risultati in thread separato
-        updatePlayerStats(result);
-    })
-    .thenRunAsync(() -> {
-        // Torna al thread principale per operazioni Bukkit
-        player.sendMessage("§aStats updated!");
-    }, bukkitScheduler::runTask);
-```
-
-#### **MongoDB Operations**
-
-```java
-MongoDatabaseManager mongoManager = (MongoDatabaseManager) dbManager;
-
-// Inserimento documento
-Document player = new Document("uuid", playerUuid)
-    .append("name", playerName)
-    .append("level", 10)
-    .append("lastLogin", new Date());
-
-mongoManager.insertDocument("players", player)
-    .thenRun(() -> logger.info("Player saved to MongoDB"));
-
-// Ricerca documenti
-Document filter = new Document("level", new Document("$gte", 50));
-mongoManager.findDocuments("players", filter)
-    .thenAccept(documents -> {
-        logger.info("Found {} high-level players", documents.size());
-    });
-```
-
----
-
-## 📁 File Manager
-
-### 📝 Formati Supportati
-
-- **YAML** (.yml, .yaml) - Configurazioni readable
-- **JSON** (.json) - Dati strutturati
-- **TOML** (.toml) - Tom's Obvious, Minimal Language  
-- **Properties** (.properties) - Formato Java standard
-
-### 🔧 Utilizzo File Manager
-
-```java
-FileManager fileManager = new FileManager(getDataFolder());
-
-// Carica file YAML
-YamlFileModel config = fileManager.getYamlFile("config.yml");
-
-// Lettura valori
-String serverName = config.getString("server.name", "Default Server");
-int maxPlayers = config.getInt("server.maxPlayers", 100);
-List<String> admins = config.getStringList("server.admins");
-
-// Scrittura valori
-config.set("server.lastRestart", System.currentTimeMillis());
-config.set("stats.totalLogins", config.getInt("stats.totalLogins", 0) + 1);
-
-// Auto-save abilitato
-config.setAutoSave(true); // Salva automaticamente ad ogni modifica
-```
-
-### 🎛️ Configurazione Avanzata
-
-```java
-// File JSON per dati complessi
-JsonFileModel playerData = fileManager.getJsonFile("players.json");
-
-// Struttura dati nidificata
-Map<String, Object> playerInfo = Map.of(
-    "uuid", player.getUniqueId().toString(),
-    "stats", Map.of(
-        "kills", 10,
-        "deaths", 3,
-        "playtime", 3600000L
-    ),
-    "locations", Map.of(
-        "home", Map.of(
-            "world", "world",
-            "x", 100.5,
-            "y", 64.0,
-            "z", 200.3
-        )
-    )
-);
-
-playerData.set("players." + player.getName(), playerInfo);
-```
-
----
-
-## 🎨 Utilities
-
-### 🌈 Text Utils
-
-AminyoMCLib offre potenti utilities per la gestione del testo:
-
-```java
-// Colori hex (1.16+) e legacy
-String message = TextUtils.colorize("&aHello &#ff5555World&r!");
-
-// Progress bar personalizzate
-String progressBar = TextUtils.createProgressBar(75, 100, 20, '█', '░');
-// Output: "███████████████░░░░░"
-
-// Centratura testo
-String centeredTitle = TextUtils.center("=== WELCOME ===", 50, ' ');
-
-// Wrap testo
-List<String> wrappedLines = TextUtils.wrapText(longText, 40);
-
-// Placeholder sostituzione
-String welcome = TextUtils.replacePlaceholders(
-    "Welcome {player} to {server}!",
-    Map.of(
-        "player", player.getName(),
-        "server", "MyServer"
-    )
-);
-```
-
-### ⏰ Time Utils
-
-```java
-// Parsing tempo human-friendly
-long duration = TimeUtils.parseTime("1h 30m 45s"); // milliseconds
-
-// Formattazione durata
-String formatted = TimeUtils.formatTime(duration); // "1h 30m 45s"
-
-// Timestamps
-String timestamp = TimeUtils.getCurrentTimestamp(); // "2024-01-15 14:30:25"
-String custom = TimeUtils.getCurrentTimestamp("dd/MM/yyyy HH:mm");
-
-// Controllo scadenza
-boolean expired = TimeUtils.hasElapsed(lastLoginTime, Duration.ofDays(30).toMillis());
-```
-
-### 🧮 Math Utils
-
-```java
-// Clamping valori
-int health = MathUtils.clamp(playerHealth, 0, 20);
-double damage = MathUtils.clamp(baseDamage * multiplier, 0.0, 999.9);
-
-// Numeri random
-int randomLevel = MathUtils.randomInt(1, 100);
-double randomMultiplier = MathUtils.randomDouble(0.8, 1.2);
-
-// Percentuali
-double percentage = MathUtils.percentage(currentXP, maxXP); // 0.0 - 1.0
-
-// Formattazione numeri
-String formatted = MathUtils.formatNumber(123456.789, 2); // "123456.79"
-```
-
-### 📍 Location Utils
-
-```java
-// Location cross-platform
-SimpleLocation loc = new SimpleLocation("world", 100.5, 64, 200.3, 180f, 0f);
-
-// Calcolo distanze
-double distance = LocationUtils.distance(loc1, loc2);
-double distance2D = LocationUtils.distance2D(x1, z1, x2, z2);
-
-// Parsing da stringa
-SimpleLocation parsed = LocationUtils.parseLocation("world:100,64,200:180,0");
-
-// Area checking
-boolean inArea = LocationUtils.isWithinArea(playerLoc, corner1, corner2);
-```
-
-### 👤 Player Utils
-
-```java
-// Validazione nomi
-boolean validName = PlayerUtils.isValidPlayerName("Aminyo"); // true
-boolean validUUID = PlayerUtils.isValidUUID(uuid.toString());
-
-// UUID formatting
-String formatted = PlayerUtils.formatUUID(trimmedUuid);
-String trimmed = PlayerUtils.trimUUID(formattedUuid);
-
-// Per Spigot - utilities specifiche
-Player player = SpigotPlayerUtils.getPlayer("Aminyo");
-SpigotPlayerUtils.sendMessage(player, "&aWelcome back!");
-SpigotPlayerUtils.broadcast("&6Server restarting in 5 minutes!");
-```
-
----
-
-## 📖 Esempi
-
-### 🏆 Plugin Completo di Esempio
-
-```java
-public class ExamplePlugin extends SpigotAminyoPlugin {
-    
-    private FileManager fileManager;
-    private DatabaseModule databaseModule;
-    
-    @Override
-    public void onEnable() {
-        super.onEnable(); // Inizializza AminyoMCLib
-        
-        // Setup file manager
-        this.fileManager = new FileManager(getDataFolder().getAbsolutePath());
-        
-        // Carica configurazione
-        YamlFileModel config = fileManager.getYamlFile("config.yml");
-        setupDefaultConfig(config);
-        
-        // Setup database se abilitato
-        if (config.getBoolean("database.enabled", false)) {
-            setupDatabase(config);
-        }
-        
-        // Registra comandi e listener
-        registerCommands();
-        registerListeners();
-        
-        getLogger().info("ExamplePlugin abilitato!");
-    }
-    
-    private void setupDefaultConfig(YamlFileModel config) {
-        // Valori di default
-        Map<String, Object> defaults = Map.of(
-            "plugin.name", "ExamplePlugin",
-            "plugin.prefix", "&8[&6Example&8] ",
-            "database.enabled", false,
-            "database.type", "SQLITE",
-            "database.file", "data.db",
-            "features.welcomeMessage", true,
-            "features.autoSave", true,
-            "messages.welcome", "&aWelcome {player} to the server!",
-            "messages.goodbye", "&cGoodbye {player}!"
-        );
-        
-        defaults.forEach((key, value) -> {
-            if (!config.contains(key)) {
-                config.set(key, value);
-            }
-        });
-        
-        config.save();
-    }
-    
-    private void setupDatabase(YamlFileModel config) {
-        this.databaseModule = new DatabaseModule(getDataFolder().getAbsolutePath());
-        databaseModule.enable();
-        
-        // Configura database
-        DatabaseConfig dbConfig = new DatabaseConfig(
-            DatabaseType.valueOf(config.getString("database.type", "SQLITE"))
-        );
-        
-        if (dbConfig.getType().isFile()) {
-            dbConfig.setFilePath(config.getString("database.file", "data.db"));
-        } else {
-            dbConfig.setHost(config.getString("database.host", "localhost"));
-            dbConfig.setPort(config.getInt("database.port", 3306));
-            dbConfig.setDatabase(config.getString("database.name", "minecraft"));
-            dbConfig.setUsername(config.getString("database.username", "root"));
-            dbConfig.setPassword(config.getString("database.password", ""));
-        }
-        
-        try {
-            DatabaseManager dbManager = databaseModule.createDatabaseManager("main", dbConfig);
-            
-            // Crea tabelle se necessario
-            createTables(dbManager);
-            
-            getLogger().info("Database connesso: " + dbConfig.getType());
-        } catch (Exception e) {
-            getLogger().severe("Errore connessione database: " + e.getMessage());
-        }
-    }
-    
-    private void createTables(DatabaseManager dbManager) throws Exception {
-        // Tabella giocatori
-        dbManager.executeUpdate("""
-            CREATE TABLE IF NOT EXISTS players (
-                id INTEGER PRIMARY KEY AUTO_INCREMENT,
-                uuid VARCHAR(36) UNIQUE NOT NULL,
-                name VARCHAR(16) NOT NULL,
-                first_join BIGINT NOT NULL,
-                last_join BIGINT NOT NULL,
-                total_playtime BIGINT DEFAULT 0,
-                level INTEGER DEFAULT 1,
-                experience BIGINT DEFAULT 0
-            )
-        """);
-        
-        // Indici per performance
-        dbManager.executeUpdate("CREATE INDEX IF NOT EXISTS idx_players_uuid ON players(uuid)");
-        dbManager.executeUpdate("CREATE INDEX IF NOT EXISTS idx_players_name ON players(name)");
-    }
-    
-    private void registerCommands() {
-        registerCommand(new InfoCommand(this));
-        registerCommand(new StatsCommand(this));
-        registerCommand(new ReloadCommand(this));
-    }
-    
-    private void registerListeners() {
-        registerListener(new PlayerJoinListener(this));
-        registerListener(new PlayerQuitListener(this));
-    }
-}
-```
-
-### 🎯 Comando Avanzato
-
-```java
-public class StatsCommand extends SpigotCommand {
-    
-    private final ExamplePlugin plugin;
-    private final DatabaseManager dbManager;
-    
-    public StatsCommand(ExamplePlugin plugin) {
-        super(plugin, "stats", "example.stats", "View player statistics");
-        this.plugin = plugin;
-        this.dbManager = plugin.getDatabaseModule().getDatabaseManager("main");
-    }
-    
-    @Override
-    protected void execute(CommandSender sender, String[] args) {
-        if (!isPlayer(sender)) {
-            sendMessage(sender, "&cThis command can only be used by players!");
-            return;
-        }
-        
-        Player player = getPlayer(sender);
-        String targetPlayer = args.length > 0 ? args[0] : player.getName();
-        
-        // Query asincrona per non bloccare il server
-        dbManager.executeQueryAsync(
-            "SELECT * FROM players WHERE name = ? OR uuid = ?",
-            targetPlayer, targetPlayer
-        ).thenAccept(result -> {
-            
-            if (result.isEmpty()) {
-                sendMessage(sender, "&cPlayer not found: " + targetPlayer);
-                return;
-            }
-            
-            Map<String, Object> data = result.getFirstRow();
-            
-            // Torna al thread principale per inviare il messaggio
-            plugin.getScheduler().runSync(() -> {
-                sendStatsMessage(sender, data);
-            });
-            
-        }).exceptionally(throwable -> {
-            plugin.getLogger().severe("Error querying player stats: " + throwable.getMessage());
-            sendMessage(sender, "&cError retrieving stats!");
-            return null;
-        });
-    }
-    
-    private void sendStatsMessage(CommandSender sender, Map<String, Object> data) {
-        String name = (String) data.get("name");
-        long firstJoin = (Long) data.get("first_join");
-        long lastJoin = (Long) data.get("last_join");
-        long playtime = (Long) data.get("total_playtime");
-        int level = (Integer) data.get("level");
-        long experience = (Long) data.get("experience");
-        
-        // Header decorativo
-        sendMessage(sender, "");
-        sendMessage(sender, "&6&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬");
-        sendMessage(sender, TextUtils.center("&6&lPLAYER STATS", 30, ' '));
-        sendMessage(sender, "&6&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬");
-        
-        // Statistiche
-        sendMessage(sender, "");
-        sendMessage(sender, "&7Player: &f" + name);
-        sendMessage(sender, "&7Level: &a" + level + " &8(&7" + experience + " XP&8)");
-        sendMessage(sender, "&7First Join: &b" + TimeUtils.formatTime(System.currentTimeMillis() - firstJoin) + " ago");
-        sendMessage(sender, "&7Last Seen: &b" + TimeUtils.formatTime(System.currentTimeMillis() - lastJoin) + " ago");
-        sendMessage(sender, "&7Playtime: &e" + TimeUtils.formatTime(playtime));
-        
-        // Progress bar XP
-        long xpToNext = (level + 1) * 1000L;
-        long currentLevelXP = experience - (level * 1000L);
-        String xpBar = TextUtils.createProgressBar(currentLevelXP, 1000, 20, '█', '▒');
-        sendMessage(sender, "&7XP Progress: &a" + xpBar + " &7(" + currentLevelXP + "/1000)");
-        
-        sendMessage(sender, "&6&l▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬");
-        sendMessage(sender, "");
-    }
-    
-    @Override
-    protected List<String> tabComplete(CommandSender sender, String[] args) {
-        if (args.length == 1) {
-            return SpigotPlayerUtils.getOnlinePlayerNames().stream()
-                    .filter(name -> name.toLowerCase().startsWith(args[0].toLowerCase()))
-                    .collect(Collectors.toList());
-        }
-        return new ArrayList<>();
-    }
-}
-```
-
----
-
-## 🤝 Contribuire
-
-Contributi sono benvenuti! Segui questi passi:
-
-### 🍴 Fork e Setup
+AminyoMCLib includes comprehensive test suites for all modules:
 
 ```bash
-# Fork del repository
-git clone https://github.com/tuousername/AminyoMCLib.git
-cd AminyoMCLib
+# Run all tests
+mvn test
 
-# Setup ambiente sviluppo
-./gradlew build
+# Run specific module tests
+mvn test -pl aminyo-database
+
+# Run with coverage
+mvn test jacoco:report
 ```
 
-### 🔧 Linee Guida
+### 📋 **Test Coverage**
 
-1. **Java 21+** - Usa le ultime feature di Java
-2. **Codice Pulito** - Segui le convenzioni Java
-3. **Test** - Aggiungi test per nuove feature
-4. **Documentazione** - Documenta le API pubbliche
-5. **Commit Convention** - Usa conventional commits
-
-### 📝 Esempio Commit
-
-```bash
-feat(database): add Redis support for caching
-fix(spigot): resolve compatibility issue with 1.7.10
-docs(readme): update installation instructions
-test(utils): add tests for TimeUtils parsing
-```
-
-### 🎯 Aree di Contributo
-
-- 🐛 **Bug Fixes** - Risolvi problemi esistenti
-- ✨ **Nuove Feature** - Aggiungi funzionalità
-- 📚 **Documentazione** - Migliora guide e esempi  
-- 🧪 **Testing** - Espandi la copertura test
-- 🎨 **Performance** - Ottimizza il codice
-- 🌍 **Localizzazione** - Traduci in altre lingue
+- **Core**: 95% line coverage
+- **File**: 90% line coverage  
+- **Database**: 85% line coverage
+- **Utils**: 92% line coverage
 
 ---
 
-## 🆘 Supporto
+## 🆘 **Support**
 
-### 📞 Canali di Supporto
+<div align="center">
 
-- 🐛 **Issues**: [GitHub Issues](https://github.com/aminyo/AminyoMCLib/issues)
-- 💬 **Discord**: [Server Discord](https://discord.gg/aminyo)
-- 📧 **Email**: support@aminyo.it
-- 📖 **Wiki**: [Documentazione Completa](https://github.com/aminyo/AminyoMCLib/wiki)
+### 💬 **Get Help**
 
-### ❓ FAQ
+[![Discord](https://img.shields.io/discord/YOUR_DISCORD_ID?color=7289da&label=Discord&logo=discord)](https://discord.gg/your-invite)
+[![GitHub Issues](https://img.shields.io/github/issues/aminyo/aminyo-mclib.svg)](https://github.com/aminyo/aminyo-mclib/issues)
+[![Wiki](https://img.shields.io/badge/Wiki-Documentation-blue)](https://github.com/aminyo/aminyo-mclib/wiki)
 
-<details>
-<summary><strong>AminyoMCLib è compatibile con la mia versione di Minecraft?</strong></summary>
+</div>
 
-AminyoMCLib supporta versioni da 1.7.10 a 1.21.8 per Spigot/Paper, tutte le versioni di BungeeCord, e Velocity 3.0+. Controlla la tabella compatibilità sopra.
-</details>
+### 📚 **Resources**
 
-<details>
-<summary><strong>Posso usare AminyoMCLib in progetti commerciali?</strong></summary>
+- 📖 [Wiki Documentation](https://github.com/aminyo/aminyo-mclib/wiki)
+- 💡 [Examples Repository](https://github.com/aminyo/aminyo-mclib-examples)
+- 🐛 [Bug Reports](https://github.com/aminyo/aminyo-mclib/issues/new?template=bug_report.md)
+- 🚀 [Feature Requests](https://github.com/aminyo/aminyo-mclib/issues/new?template=feature_request.md)
 
-Sì! AminyoMCLib è rilasciata sotto licenza MIT, che permette uso commerciale, modifica e distribuzione.
-</details>
+### 🤝 **Contributing**
 
-<details>
-<summary><strong>Come posso migrare da altre librerie?</strong></summary>
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
 
-Forniamo guide di migrazione per librerie popolari come HikariCP, SnakeYAML, etc. Controlla la sezione Wiki.
-</details>
-
-<details>
-<summary><strong>AminyoMCLib supporta Kotlin?</strong></summary>
-
-Sì! Essendo una libreria Java, è completamente compatibile con Kotlin e tutti i linguaggi JVM.
-</details>
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ---
 
-## 🎉 Ringraziamenti
+## 📄 **License**
 
-Un ringraziamento speciale a:
-
-- 🎯 **Spigot Team** - Per l'incredibile API
-- 🚀 **Paper Team** - Per le ottimizzazioni performance
-- 🌐 **BungeeCord/Velocity** - Per il supporto proxy
-- 🛠️ **HikariCP** - Per il connection pooling
-- 📊 **MongoDB** - Per il supporto NoSQL
-- 🎨 **SnakeYAML** - Per il parsing YAML
-- 💾 **H2/SQLite** - Per i database embedded
-- 🧪 **JUnit** - Per il framework testing
-- ❤️ **Community** - Per feedback e contributi
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 📜 Licenza
+## ⭐ **Star History**
 
-```
-MIT License
+<div align="center">
 
-Copyright (c) 2024 Aminyo
+[![Star History Chart](https://api.star-history.com/svg?repos=aminyo/aminyo-mclib&type=Date)](https://star-history.com/#aminyo/aminyo-mclib&Date)
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the
+**If AminyoMCLib helps you, please consider giving it a star! ⭐**
+
+</div>
+
+---
+
+## 🙏 **Acknowledgments**
+
+- **HikariCP** for excellent connection pooling
+- **SnakeYAML** for robust YAML parsing  
+- **MongoDB** team for the Java driver
+- **Spigot/Paper** community for extensive testing
+- **All contributors** who help improve this library
+
+---
+
+<div align="center">
+
+**Made with ❤️ for the Minecraft community**
+
+*AminyoMCLib - Simplifying Minecraft plugin development, one module at a time.*
+
+</div>
